@@ -7,3 +7,12 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.home-about {
+    padding: 7.5rem 0;
+    background-color: $grey;
+
+    & .wrapper {
+        @include sbfsc;
+    }
+}

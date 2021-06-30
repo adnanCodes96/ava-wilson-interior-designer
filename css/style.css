@@ -17,11 +17,17 @@ a {
   text-decoration: none;
   color: #242424; }
 
-.heading--primary {
-  font-size: 3.6rem;
-  font-weight: 400;
-  color: #242424;
-  margin-bottom: 1.8rem; }
+.heading {
+  color: #242424; }
+  .heading--primary {
+    font-size: 3.6rem;
+    margin-bottom: 1.8rem;
+    font-weight: 400 !important; }
+  .heading--secondary {
+    font-size: 3.2rem;
+    margin-bottom: 3rem;
+    font-weight: 500;
+    line-height: 1.2; }
 
 .hero .text {
   width: 55%;
@@ -30,6 +36,9 @@ a {
 
 .cta {
   color: #242424; }
+
+.home-about .text {
+  margin-bottom: 3rem; }
 
 * {
   margin: 0;
@@ -121,3 +130,11 @@ img {
   background-position: 45% center;
   background-repeat: no-repeat;
   background-size: cover; }
+
+.home-about {
+  padding: 7.5rem 0;
+  background-color: #eaeaea; }
+  .home-about .wrapper {
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column; }

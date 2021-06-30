@@ -22,11 +22,21 @@ a {
     color: $dark;
 }
 
-.heading--primary {
-    font-size: 3.6rem;
-    font-weight: 400;
+.heading {
     color: $dark;
-    margin-bottom: 1.8rem;
+    
+    &--primary {
+        font-size: 3.6rem;
+        margin-bottom: 1.8rem;
+        font-weight: 400 !important;
+    }
+
+    &--secondary {
+        font-size: 3.2rem;
+        margin-bottom: 3rem;
+        font-weight: 500;
+        line-height: 1.2;
+    }
 }
 
 .hero {
@@ -39,4 +49,10 @@ a {
 
 .cta {
     color: $dark;
+}
+
+.home-about {
+    & .text {
+        margin-bottom: 3rem;
+    }
 }
