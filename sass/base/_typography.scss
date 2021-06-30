@@ -6,11 +6,37 @@ html {
 
 body {
     font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
 }
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
 .logo {
     font-size: 1.6rem;
     font-weight: 700;
     text-transform: uppercase;
     text-decoration: none;
+    color: $dark;
+}
+
+.heading--primary {
+    font-size: 3.6rem;
+    font-weight: 400;
+    color: $dark;
+    margin-bottom: 1.8rem;
+}
+
+.hero {
+    & .text {
+        width: 55%;
+        font-weight: 300;
+        line-height: 1.6;
+    }
+}
+
+.cta {
     color: $dark;
 }

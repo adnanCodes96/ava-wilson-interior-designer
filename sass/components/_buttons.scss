@@ -1,0 +1,11 @@
+.cta {
+    border: .2rem solid $dark;
+    display: inline-block;
+    padding: 1rem 8rem;
+    transition: all .5s ease-in-out;
+
+    &:hover {
+        background-color: $dark;
+        color: $white;
+    }
+}
