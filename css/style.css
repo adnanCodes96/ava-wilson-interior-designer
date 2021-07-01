@@ -91,8 +91,10 @@ img {
       .header .menu__line:not(:last-child) {
         margin-bottom: .7rem; }
 
+.grid {
+  display: grid; }
+
 .hero .grid {
-  display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   height: 100%;
@@ -122,6 +124,52 @@ img {
         width: 100%;
         object-fit: cover; }
 
+.implemented-projects .grid {
+  grid-template-columns: 45% 10% 45%;
+  grid-template-rows: 10rem 3rem 5rem 20rem 7.5rem 3rem 5rem 20rem 7.5rem 3rem 5rem 20rem 7.5rem;
+  width: 100%; }
+  .implemented-projects .grid__item {
+    display: flex; }
+    .implemented-projects .grid__item--1 {
+      grid-column: 1 / 2;
+      grid-row: 2 / 5;
+      background-image: url(../../images/water-stadium.jpg);
+      background-attachment: scroll;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    .implemented-projects .grid__item--2 {
+      grid-column: 1 / -1;
+      grid-row: 3 / 4;
+      justify-content: center;
+      align-items: center; }
+    .implemented-projects .grid__item--3 {
+      grid-column: 3 / -1;
+      grid-row: 6 / 9;
+      background-image: url(../../images/udaltsova.jpg);
+      background-attachment: scroll;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    .implemented-projects .grid__item--4 {
+      grid-column: 1 / -1;
+      grid-row: 7 / 8;
+      justify-content: center;
+      align-items: center; }
+    .implemented-projects .grid__item--5 {
+      grid-column: 1 / 2;
+      grid-row: 10 / 13;
+      background-image: url(../../images/prechisenka.jpg);
+      background-attachment: scroll;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    .implemented-projects .grid__item--6 {
+      grid-column: 1 / -1;
+      grid-row: 11/ 12;
+      justify-content: center;
+      align-items: center; }
+
 .hero {
   height: calc(100% - 2rem);
   width: 100%;
@@ -138,3 +186,15 @@ img {
     justify-content: space-between;
     align-items: flex-start;
     flex-direction: column; }
+
+.implemented-projects {
+  background-color: #fff;
+  padding: 7.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 100%; }
+  .implemented-projects .wrapper {
+    justify-content: center;
+    text-align: center; }
