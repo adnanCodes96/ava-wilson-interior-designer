@@ -198,3 +198,42 @@ img {
   .implemented-projects .wrapper {
     justify-content: center;
     text-align: center; }
+
+.home-services {
+  background-color: #fff;
+  padding: 7.5rem 0; }
+  .home-services .wrapper {
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column; }
+  .home-services .accordion {
+    margin: 5rem 0 8rem 0; }
+    .home-services .accordion__item {
+      border-bottom: 0.1rem solid #f2f2f2; }
+    .home-services .accordion__top {
+      padding: 3.5rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .home-services .accordion__top .plus {
+        height: 1rem;
+        width: 1rem;
+        position: relative; }
+        .home-services .accordion__top .plus .horisontal {
+          height: .1rem;
+          width: 100%;
+          background-color: #595959;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%); }
+        .home-services .accordion__top .plus .vertical {
+          height: 100%;
+          width: .1rem;
+          background-color: #595959;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%); }
+    .home-services .accordion__bottom {
+      padding: 0;
+      height: 0;
+      visibility: hidden; }
