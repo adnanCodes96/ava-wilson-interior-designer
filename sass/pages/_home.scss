@@ -87,3 +87,14 @@
         }
     }
 }
+
+.instagram {
+    padding: 7.5rem 0;
+    background-color: $white;
+
+    & .wrapper {
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

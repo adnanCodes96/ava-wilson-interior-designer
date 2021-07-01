@@ -40,6 +40,25 @@ a {
 .home-about .text {
   margin-bottom: 3rem; }
 
+.email {
+  color: #242424;
+  font-size: 2.2rem;
+  font-weight: 400;
+  position: relative;
+  z-index: 1; }
+  .email::after {
+    content: '';
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    z-index: -1;
+    height: .6rem;
+    width: 100%;
+    background-color: #f2f2f2;
+    transition: all .3s ease-in-out; }
+  .email:hover::after {
+    height: .3rem; }
+
 * {
   margin: 0;
   padding: 0;
@@ -170,6 +189,24 @@ img {
       justify-content: center;
       align-items: center; }
 
+.instagram .grid {
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 7.5rem; }
+  .instagram .grid__item {
+    width: 100%;
+    height: 0;
+    padding-top: 100%; }
+    .instagram .grid__item--1 {
+      background-image: url(../../images/instagram-1.jpg);
+      background-attachment: scroll;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      grid-column: 1 / -1; }
+    .instagram .grid__item--2, .instagram .grid__item--3, .instagram .grid__item--4 {
+      display: none; }
+
 .hero {
   height: calc(100% - 2rem);
   width: 100%;
@@ -237,3 +274,11 @@ img {
       padding: 0;
       height: 0;
       visibility: hidden; }
+
+.instagram {
+  padding: 7.5rem 0;
+  background-color: #fff; }
+  .instagram .wrapper {
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column; }
