@@ -57,7 +57,7 @@ a {
     }
 }
 
-.email {
+.instagram-username {
     color: $dark;
     font-size: 2.2rem;
     font-weight: 400;
@@ -73,6 +73,32 @@ a {
         height: .6rem;
         width: 100%;
         background-color: $grey-light;
+        transition: all .3s ease-in-out;
+    }
+
+    &:hover {
+        &::after {
+            height: .3rem;
+        }
+    }
+}
+
+.email {
+    color: $dark;
+    font-size: 1.8rem;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 4rem;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0%;
+        bottom: 0%;
+        z-index: -1;
+        height: .6rem;
+        width: 100%;
+        background-color: $white;
         transition: all .3s ease-in-out;
     }
 

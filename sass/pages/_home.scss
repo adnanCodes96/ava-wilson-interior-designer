@@ -98,3 +98,18 @@
         flex-direction: column;
     }
 }
+
+.questions {
+    background-color: $white;
+
+    & .wrapper {
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    &__bottom {
+        background-color: $grey;
+        padding: 3.5rem 0;
+    }
+}
