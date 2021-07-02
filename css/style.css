@@ -238,6 +238,110 @@ ul {
     .instagram .grid__item--2, .instagram .grid__item--3, .instagram .grid__item--4 {
       display: none; }
 
+.portfolio .grid {
+  grid-template-columns: 1fr;
+  width: 100%;
+  gap: 2.5rem; }
+  .portfolio .grid__item {
+    width: 100%;
+    height: 0;
+    padding-top: 100%;
+    position: relative;
+    overflow: hidden; }
+    .portfolio .grid__item::before {
+      content: '';
+      position: absolute;
+      top: 0%;
+      right: 0%;
+      bottom: 0%;
+      left: 0%;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(36, 36, 36, 0.35);
+      transition: all .3s ease-in-out; }
+    .portfolio .grid__item::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      color: #fff;
+      font-size: 2.8rem;
+      font-weight: 400;
+      margin: 0 0 2.5rem 2.5rem; }
+    .portfolio .grid__item:hover::before {
+      background-color: rgba(36, 36, 36, 0); }
+    .portfolio .grid__item--1 {
+      background-image: url(../../images/restaurant.jpg);
+      background-attachment: scroll;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+      .portfolio .grid__item--1::after {
+        content: attr(data-name); }
+    .portfolio .grid__item--2 {
+      background-image: url(../../images/water-stadium.jpg);
+      background-attachment: scroll;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+      .portfolio .grid__item--2::after {
+        content: attr(data-name); }
+    .portfolio .grid__item--3 {
+      background-image: url(../../images/udaltsova.jpg);
+      background-attachment: scroll;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+      .portfolio .grid__item--3::after {
+        content: attr(data-name); }
+    .portfolio .grid__item--4 {
+      background-image: url(../../images/prechisenka.jpg);
+      background-attachment: scroll;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+      .portfolio .grid__item--4::after {
+        content: attr(data-name); }
+    .portfolio .grid__item--5 {
+      background-image: url(../../images/apartment-in-nice.jpg);
+      background-attachment: scroll;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+      .portfolio .grid__item--5::after {
+        content: attr(data-name); }
+    .portfolio .grid__item--6 {
+      background-image: url(../../images/childrens-room.jpg);
+      background-attachment: scroll;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+      .portfolio .grid__item--6::after {
+        content: attr(data-name); }
+    .portfolio .grid__item--7 {
+      background-image: url(../../images/house-in-kurkino.jpg);
+      background-attachment: scroll;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+      .portfolio .grid__item--7::after {
+        content: attr(data-name); }
+    .portfolio .grid__item--8 {
+      background-image: url(../../images/apartment-on-the-kutuzovskaya-riviera.jpg);
+      background-attachment: scroll;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+      .portfolio .grid__item--8::after {
+        content: attr(data-name); }
+    .portfolio .grid__item--9 {
+      background-image: url(../../images/house-in-pavlovo.jpg);
+      background-attachment: scroll;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+      .portfolio .grid__item--9::after {
+        content: attr(data-name); }
+
 .footer {
   background-color: #242424;
   padding: 5rem 0 1rem 0; }
@@ -337,3 +441,16 @@ ul {
   .questions__bottom {
     background-color: #eaeaea;
     padding: 3.5rem 0; }
+
+.about {
+  background-color: #fff;
+  padding: 12rem 0 3.5rem 0rem;
+  height: 50%; }
+  .about .wrapper {
+    height: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column; }
+
+.portfolio {
+  padding-bottom: 7.5rem; }
