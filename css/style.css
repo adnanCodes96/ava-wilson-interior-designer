@@ -78,6 +78,15 @@ a {
   .email:hover::after {
     height: .3rem; }
 
+.footer {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.6rem; }
+
+.author {
+  color: #fff; }
+
 * {
   margin: 0;
   padding: 0;
@@ -128,6 +137,9 @@ img {
       border-radius: 5rem; }
       .header .menu__line:not(:last-child) {
         margin-bottom: .7rem; }
+
+ul {
+  list-style: none; }
 
 .grid {
   display: grid; }
@@ -225,6 +237,20 @@ img {
       grid-column: 1 / -1; }
     .instagram .grid__item--2, .instagram .grid__item--3, .instagram .grid__item--4 {
       display: none; }
+
+.footer {
+  background-color: #242424;
+  padding: 5rem 0 1rem 0; }
+  .footer .wrapper {
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column; }
+  .footer__item:not(:last-child) {
+    margin-bottom: 3.5rem; }
+  .footer__ul li:not(:last-child) {
+    margin-bottom: 1.8rem; }
+  .footer__ul a {
+    color: #fff; }
 
 .hero {
   height: calc(100% - 2rem);

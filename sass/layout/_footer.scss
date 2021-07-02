@@ -1,0 +1,26 @@
+.footer {
+    background-color: $dark;
+    padding: 5rem 0 1rem 0;
+
+    & .wrapper {
+        @include sbfsc;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 3.5rem;
+        }
+    }
+
+    &__ul {
+        & li {
+            &:not(:last-child) {
+                margin-bottom: 1.8rem;
+            }
+        }
+
+        & a {
+            color: $white;
+        }
+    }
+}
