@@ -1,0 +1,39 @@
+.services {
+    padding: 7.5rem 0;
+
+
+
+    &__intro {
+        padding: 12rem 0 5rem 0;
+        border-bottom: .1rem solid $grey;
+
+        & .wrapper {
+            height: 100%;
+            @include sbfsc;
+        }
+    }
+
+    &__ul {
+        list-style: none;
+
+        & li {
+            position: relative;
+            padding-left: 3rem;
+
+            &:not(:last-child) {
+                margin-bottom: 1.5rem;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                height: .1rem;
+                width: 2rem;
+                background-color: $dark;
+            }
+        }
+    }
+}

@@ -41,50 +41,50 @@
         align-items: flex-start;
         flex-direction: column;
     }
+}
 
-    & .accordion {
-        margin: 5rem 0 8rem 0;
+.accordion {
+    margin: 5rem 0 8rem 0;
 
-        &__item {
-            border-bottom: .1rem solid $grey-light;
-        }
+    &__item {
+        border-bottom: .1rem solid $grey-light;
+    }
 
-        &__top {
-            padding: 3.5rem 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+    &__top {
+        padding: 3.5rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-            & .plus {
-                height: 1rem;
-                width: 1rem;
-                position: relative;
+        & .plus {
+            height: 1rem;
+            width: 1rem;
+            position: relative;
 
-                & .horisontal {
-                    height: .1rem;
-                    width: 100%;
-                    background-color: $grey-dark;
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                }
+            & .horisontal {
+                height: .1rem;
+                width: 100%;
+                background-color: $grey-dark;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
 
-                & .vertical {
-                    height: 100%;
-                    width: .1rem;
-                    background-color: $grey-dark;
-                    position: absolute;
-                    left: 50%;
-                    transform: translateX(-50%);
-                }
+            & .vertical {
+                height: 100%;
+                width: .1rem;
+                background-color: $grey-dark;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
             }
         }
+    }
 
-        &__bottom {
-            padding: 0;
-            height: 0;
-            visibility: hidden;
-        }
+    &__bottom {
+        padding: 0;
+        height: 0;
+        visibility: hidden;
     }
 }
 

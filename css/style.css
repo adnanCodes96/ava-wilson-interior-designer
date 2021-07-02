@@ -28,6 +28,13 @@ a {
     margin-bottom: 3rem;
     font-weight: 500;
     line-height: 1.2; }
+  .heading--terterary {
+    font-size: 2.8rem;
+    margin-bottom: 3rem;
+    font-weight: 500; }
+
+.text:not(:last-child) {
+  margin-bottom: 3.5rem; }
 
 .hero .text {
   width: 55%;
@@ -342,6 +349,13 @@ ul {
       .portfolio .grid__item--9::after {
         content: attr(data-name); }
 
+.services .grid {
+  grid-template-columns: 1fr;
+  width: 100%; }
+  .services .grid__item {
+    padding: 5rem 0;
+    border-bottom: 0.1rem solid #eaeaea; }
+
 .footer {
   background-color: #242424;
   padding: 5rem 0 1rem 0; }
@@ -392,37 +406,38 @@ ul {
     justify-content: space-between;
     align-items: flex-start;
     flex-direction: column; }
-  .home-services .accordion {
-    margin: 5rem 0 8rem 0; }
-    .home-services .accordion__item {
-      border-bottom: 0.1rem solid #f2f2f2; }
-    .home-services .accordion__top {
-      padding: 3.5rem 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center; }
-      .home-services .accordion__top .plus {
-        height: 1rem;
-        width: 1rem;
-        position: relative; }
-        .home-services .accordion__top .plus .horisontal {
-          height: .1rem;
-          width: 100%;
-          background-color: #595959;
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%); }
-        .home-services .accordion__top .plus .vertical {
-          height: 100%;
-          width: .1rem;
-          background-color: #595959;
-          position: absolute;
-          left: 50%;
-          transform: translateX(-50%); }
-    .home-services .accordion__bottom {
-      padding: 0;
-      height: 0;
-      visibility: hidden; }
+
+.accordion {
+  margin: 5rem 0 8rem 0; }
+  .accordion__item {
+    border-bottom: 0.1rem solid #f2f2f2; }
+  .accordion__top {
+    padding: 3.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .accordion__top .plus {
+      height: 1rem;
+      width: 1rem;
+      position: relative; }
+      .accordion__top .plus .horisontal {
+        height: .1rem;
+        width: 100%;
+        background-color: #595959;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%); }
+      .accordion__top .plus .vertical {
+        height: 100%;
+        width: .1rem;
+        background-color: #595959;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%); }
+  .accordion__bottom {
+    padding: 0;
+    height: 0;
+    visibility: hidden; }
 
 .instagram {
   padding: 7.5rem 0;
@@ -454,3 +469,30 @@ ul {
 
 .portfolio {
   padding-bottom: 7.5rem; }
+
+.services {
+  padding: 7.5rem 0; }
+  .services__intro {
+    padding: 12rem 0 5rem 0;
+    border-bottom: 0.1rem solid #eaeaea; }
+    .services__intro .wrapper {
+      height: 100%;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-direction: column; }
+  .services__ul {
+    list-style: none; }
+    .services__ul li {
+      position: relative;
+      padding-left: 3rem; }
+      .services__ul li:not(:last-child) {
+        margin-bottom: 1.5rem; }
+      .services__ul li::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        height: .1rem;
+        width: 2rem;
+        background-color: #242424; }
