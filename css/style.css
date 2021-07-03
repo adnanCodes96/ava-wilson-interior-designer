@@ -120,6 +120,24 @@ img {
     background-color: #242424;
     color: #fff; }
 
+.btn {
+  color: #242424;
+  background-color: transparent;
+  border: 0.2rem solid #242424;
+  border-radius: .3rem;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 3.5rem;
+  padding: 1.6rem;
+  transition: all .3s ease-in-out;
+  width: 100%; }
+  .btn:hover {
+    background-color: #242424;
+    color: #fff; }
+
 .header {
   position: absolute;
   top: 0;
@@ -381,6 +399,52 @@ ul {
         align-items: flex-start;
         flex-direction: column; }
 
+.form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%; }
+  .form__top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 3.5rem; }
+    .form__top .form__item {
+      width: 45%;
+      position: relative; }
+  .form__bottom {
+    width: 100%; }
+    .form__bottom .form__item:not(:last-child) {
+      margin-bottom: 2.5rem; }
+  .form__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column; }
+
+input[type="text"],
+input[type="email"] {
+  border: none;
+  border-bottom: 0.1rem solid #eaeaea;
+  color: #595959;
+  font-size: 1.8rem;
+  outline-width: 0;
+  padding-bottom: .5rem;
+  width: 100%; }
+
+textarea {
+  border: none;
+  border-bottom: 0.1rem solid #eaeaea;
+  color: #595959;
+  font-size: 1.8rem;
+  height: 3rem !important;
+  outline-width: 0;
+  padding-bottom: .5rem;
+  resize: none;
+  width: 100%; }
+
 .footer {
   background-color: #242424;
   padding: 5rem 0 1rem 0; }
@@ -535,3 +599,35 @@ ul {
         height: .1rem;
         width: 2rem;
         background-color: #242424; }
+
+.contact {
+  padding: 7.5rem 0; }
+  .contact .wrapper {
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column; }
+  .contact__top {
+    margin-bottom: 3.5rem; }
+  .contact__bottom {
+    width: 100%; }
+  .contact__intro {
+    padding: 12rem 0 0rem 0; }
+    .contact__intro .wrapper {
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-direction: column; }
+
+.social {
+  background-color: #eaeaea;
+  padding: 4rem 0; }
+  .social .wrapper {
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column; }
+  .social__top {
+    margin-bottom: 3rem; }
+  .social__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column; }

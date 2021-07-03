@@ -1,0 +1,61 @@
+.form {
+    display: flex;
+    @include sbfsc;
+    width: 100%;
+
+    &__top {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 3.5rem;
+
+        & .form__item {
+            width: 45%;
+            position: relative;
+
+            // & label {
+            //     position: absolute;
+            //     left: 0;
+            //     bottom: .5rem;
+            // }
+        }
+    }
+
+    &__bottom {
+        width: 100%;
+        & .form__item {
+            &:not(:last-child) {
+                margin-bottom: 2.5rem;
+            }
+        }
+    }
+
+    &__item {
+        display: flex;
+        @include sbfsc;
+    }
+}
+
+input[type="text"],
+input[type="email"] {
+    border: none;
+    border-bottom: .1rem solid $grey;
+    color: $grey-dark;
+    font-size: 1.8rem;
+    outline-width: 0;
+    padding-bottom: .5rem;
+    width: 100%;
+}
+
+textarea {
+    border: none;
+    border-bottom: .1rem solid $grey;
+    color: $grey-dark;
+    font-size: 1.8rem;
+    height: 3rem !important;
+    outline-width: 0;
+    padding-bottom: .5rem;
+    resize: none;
+    width: 100%;
+}

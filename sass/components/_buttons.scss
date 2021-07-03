@@ -9,3 +9,24 @@
         color: $white;
     }
 }
+
+.btn {
+    color: $dark;
+    background-color: transparent;
+    border: .2rem solid $dark;
+    border-radius: .3rem;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 3.5rem;
+    padding: 1.6rem;
+    transition: all .3s ease-in-out;
+    width: 100%;
+
+    &:hover {
+        background-color: $dark;
+        color: $white;
+    }
+}

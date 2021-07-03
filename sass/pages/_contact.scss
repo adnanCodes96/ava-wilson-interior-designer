@@ -1,0 +1,41 @@
+.contact {
+    padding: 7.5rem 0;
+
+    & .wrapper {
+        @include sbfsc;
+    }
+
+    &__top {
+        margin-bottom: 3.5rem;
+    }
+
+    &__bottom {
+        width: 100%;
+    }
+
+    &__intro {
+        padding: 12rem 0 0rem 0;
+
+        & .wrapper {
+            @include sbfsc;
+        }
+    }
+}
+
+.social {
+    background-color: $grey;
+    padding: 4rem 0;
+
+    & .wrapper {
+        @include sbfsc;
+    }
+
+    &__top {
+        margin-bottom: 3rem;
+    }
+
+    &__bottom {
+        display: flex;
+        @include sbfsc;
+    }
+}
