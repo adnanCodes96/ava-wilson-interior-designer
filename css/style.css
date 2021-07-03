@@ -356,6 +356,31 @@ ul {
     padding: 5rem 0;
     border-bottom: 0.1rem solid #eaeaea; }
 
+.about .grid {
+  grid-template-columns: 1fr;
+  width: 100%; }
+  .about .grid__item {
+    width: 100%;
+    height: 100%; }
+    .about .grid__item--1 {
+      padding-bottom: 7.5rem; }
+    .about .grid__item--2 {
+      background-image: url(../../images/profile.jpg);
+      background-attachment: scroll;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 0;
+      padding-top: 100%; }
+    .about .grid__item--3 {
+      background-color: #f2f2f2;
+      padding: 3rem 0 7.5rem 0; }
+      .about .grid__item--3 .wrapper {
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column; }
+
 .footer {
   background-color: #242424;
   padding: 5rem 0 1rem 0; }
@@ -458,10 +483,24 @@ ul {
     padding: 3.5rem 0; }
 
 .about {
+  padding-top: 12rem; }
+
+.work-approach {
+  padding: 7.5rem 0; }
+  .work-approach .wrapper {
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column; }
+  .work-approach ul {
+    margin-bottom: 2rem; }
+    .work-approach ul li:not(:last-child) {
+      margin-bottom: 2rem; }
+
+.projects {
   background-color: #fff;
   padding: 12rem 0 3.5rem 0rem;
   height: 50%; }
-  .about .wrapper {
+  .projects .wrapper {
     height: 100%;
     justify-content: center;
     align-items: flex-start;

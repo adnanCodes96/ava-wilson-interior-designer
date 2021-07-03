@@ -1,0 +1,19 @@
+.about {
+    padding-top: 12rem;
+}
+
+.work-approach {
+    padding: 7.5rem 0;
+
+    & .wrapper {
+        @include sbfsc;
+    }
+
+    & ul {
+        margin-bottom: 2rem;
+
+        & li:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+    }
+}
