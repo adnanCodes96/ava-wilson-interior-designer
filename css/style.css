@@ -4,7 +4,8 @@ html {
 
 body {
   font-family: 'Roboto', sans-serif;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  line-height: 1.5; }
 
 a {
   display: inline-block;
@@ -18,20 +19,23 @@ a {
   color: #242424; }
 
 .heading {
-  color: #242424; }
+  color: #242424;
+  font-weight: 400; }
   .heading--primary {
-    font-size: 3.6rem;
-    margin-bottom: 1.8rem;
-    font-weight: 400 !important; }
+    font-size: 3.4rem;
+    margin-bottom: 1.8rem; }
   .heading--secondary {
-    font-size: 3.2rem;
-    margin-bottom: 3rem;
-    font-weight: 500;
-    line-height: 1.2; }
-  .heading--terterary {
     font-size: 2.8rem;
     margin-bottom: 3rem;
-    font-weight: 500; }
+    line-height: 1.2; }
+  .heading--tertiary {
+    font-size: 2.4rem;
+    margin-bottom: 3rem; }
+  .heading--quaternary {
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem; }
+  .heading--quinary {
+    font-size: 1.8rem; }
 
 .text:not(:last-child) {
   margin-bottom: 3.5rem; }
@@ -87,9 +91,9 @@ a {
 
 .footer {
   color: #fff;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-weight: 400;
-  line-height: 1.6rem; }
+  line-height: 1.6; }
 
 .author {
   color: #fff; }
@@ -414,10 +418,20 @@ ul {
     .form__top .form__item {
       width: 45%;
       position: relative; }
+      .form__top .form__item label {
+        position: absolute;
+        left: 0;
+        bottom: .5rem; }
   .form__bottom {
     width: 100%; }
-    .form__bottom .form__item:not(:last-child) {
-      margin-bottom: 2.5rem; }
+    .form__bottom .form__item {
+      position: relative; }
+      .form__bottom .form__item label {
+        position: absolute;
+        left: 0;
+        bottom: .5rem; }
+      .form__bottom .form__item:not(:last-child) {
+        margin-bottom: 2.5rem; }
   .form__item {
     display: flex;
     justify-content: space-between;
@@ -432,7 +446,11 @@ input[type="email"] {
   font-size: 1.8rem;
   outline-width: 0;
   padding-bottom: .5rem;
+  transition: all .3s ease-in-out;
   width: 100%; }
+  input[type="text"]:focus,
+  input[type="email"]:focus {
+    border-bottom: 0.1rem solid #242424; }
 
 textarea {
   border: none;
@@ -443,7 +461,10 @@ textarea {
   outline-width: 0;
   padding-bottom: .5rem;
   resize: none;
+  transition: all .3s ease-in-out;
   width: 100%; }
+  textarea:focus {
+    border-bottom: 0.1rem solid #242424; }
 
 .footer {
   background-color: #242424;

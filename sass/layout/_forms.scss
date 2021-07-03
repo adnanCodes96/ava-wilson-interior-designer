@@ -14,17 +14,24 @@
             width: 45%;
             position: relative;
 
-            // & label {
-            //     position: absolute;
-            //     left: 0;
-            //     bottom: .5rem;
-            // }
+            & label {
+                position: absolute;
+                left: 0;
+                bottom: .5rem;
+            }
         }
     }
 
     &__bottom {
         width: 100%;
         & .form__item {
+            position: relative;
+            & label {
+                position: absolute;
+                left: 0;
+                bottom: .5rem;
+            }
+
             &:not(:last-child) {
                 margin-bottom: 2.5rem;
             }
@@ -45,7 +52,12 @@ input[type="email"] {
     font-size: 1.8rem;
     outline-width: 0;
     padding-bottom: .5rem;
+    transition: all .3s ease-in-out;
     width: 100%;
+
+    &:focus {
+        border-bottom: .1rem solid $dark;
+    }
 }
 
 textarea {
@@ -57,5 +69,10 @@ textarea {
     outline-width: 0;
     padding-bottom: .5rem;
     resize: none;
+    transition: all .3s ease-in-out;
     width: 100%;
+
+    &:focus {
+        border-bottom: .1rem solid $dark;
+    }
 }

@@ -7,6 +7,7 @@ html {
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 1.6rem;
+    line-height: 1.5;
 }
 
 a {
@@ -24,24 +25,31 @@ a {
 
 .heading {
     color: $dark;
-    
+    font-weight: 400;
+
     &--primary {
-        font-size: 3.6rem;
+        font-size: 3.4rem;
         margin-bottom: 1.8rem;
-        font-weight: 400 !important;
     }
 
     &--secondary {
-        font-size: 3.2rem;
+        font-size: 2.8rem;
         margin-bottom: 3rem;
-        font-weight: 500;
         line-height: 1.2;
     }
 
-    &--terterary {
-        font-size: 2.8rem;
+    &--tertiary {
+        font-size: 2.4rem;
         margin-bottom: 3rem;
-        font-weight: 500;
+    }
+
+    &--quaternary {
+        font-size: 2.2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    &--quinary {
+        font-size: 1.8rem;
     }
 }
 
@@ -121,9 +129,9 @@ a {
 
 .footer {
     color: $white;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-weight: 400;
-    line-height: 1.6rem;
+    line-height: 1.6;
 }
 
 .author {
