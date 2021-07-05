@@ -2,13 +2,14 @@
     display: flex;
     @include sbfsc;
     width: 100%;
+    margin-top: 5rem;
 
     &__top {
         width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
-        margin-bottom: 3.5rem;
+        margin-bottom: 5rem;
 
         & .form__item {
             width: 45%;
