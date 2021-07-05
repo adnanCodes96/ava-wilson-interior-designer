@@ -1,11 +1,15 @@
 .hero {
-    height: calc(100% - 2rem);
+    height: 100%;
     width: 100%;
     background-image: url(../../images/hero-bg.jpg);
     background-attachment: fixed;
     background-position: 45% center;
     background-repeat: no-repeat;
     background-size: cover;
+    
+    & .wrapper {
+        background-color: brown;
+    }
 }
 
 .home-about {

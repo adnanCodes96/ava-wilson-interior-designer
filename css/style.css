@@ -193,7 +193,7 @@ ul {
       flex-direction: column;
       width: 90%;
       margin: 0 auto;
-      padding: 8rem 0; }
+      padding: 12rem 0 6rem 0; }
     .hero .grid__item--2 {
       grid-column: 1 / -1;
       grid-row: 1 / -1;
@@ -216,12 +216,35 @@ ul {
       background-attachment: scroll;
       background-position: center center;
       background-repeat: no-repeat;
-      background-size: cover; }
+      background-size: cover;
+      position: relative; }
+      .implemented-projects .grid__item--1::before {
+        content: '';
+        position: absolute;
+        top: -30%;
+        left: 110%;
+        z-index: 3;
+        transform: translateX(-50%);
+        height: 6em;
+        width: .1rem;
+        background-color: #595959; }
+      .implemented-projects .grid__item--1::after {
+        content: '';
+        position: absolute;
+        top: 7rem;
+        left: 110%;
+        z-index: 3;
+        transform: translateX(-50%);
+        height: 18em;
+        width: .1rem;
+        background-color: #595959; }
     .implemented-projects .grid__item--2 {
       grid-column: 1 / -1;
       grid-row: 3 / 4;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      position: relative;
+      z-index: 2; }
     .implemented-projects .grid__item--3 {
       grid-column: 3 / -1;
       grid-row: 6 / 9;
@@ -229,12 +252,25 @@ ul {
       background-attachment: scroll;
       background-position: center center;
       background-repeat: no-repeat;
-      background-size: cover; }
+      background-size: cover;
+      position: relative; }
+      .implemented-projects .grid__item--3::after {
+        content: '';
+        position: absolute;
+        top: 7rem;
+        right: 110%;
+        z-index: 3;
+        transform: translateX(-50%);
+        height: 18em;
+        width: .1rem;
+        background-color: #595959; }
     .implemented-projects .grid__item--4 {
       grid-column: 1 / -1;
       grid-row: 7 / 8;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      position: relative;
+      z-index: 2; }
     .implemented-projects .grid__item--5 {
       grid-column: 1 / 2;
       grid-row: 10 / 13;
@@ -242,12 +278,25 @@ ul {
       background-attachment: scroll;
       background-position: center center;
       background-repeat: no-repeat;
-      background-size: cover; }
+      background-size: cover;
+      position: relative; }
+      .implemented-projects .grid__item--5::after {
+        content: '';
+        position: absolute;
+        top: 7rem;
+        left: 110%;
+        z-index: 3;
+        transform: translateX(-50%);
+        height: 13.2em;
+        width: .1rem;
+        background-color: #595959; }
     .implemented-projects .grid__item--6 {
       grid-column: 1 / -1;
       grid-row: 11/ 12;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      position: relative;
+      z-index: 2; }
 
 .instagram .grid {
   width: 100%;
@@ -481,13 +530,15 @@ textarea {
     color: #fff; }
 
 .hero {
-  height: calc(100% - 2rem);
+  height: 100%;
   width: 100%;
   background-image: url(../../images/hero-bg.jpg);
   background-attachment: fixed;
   background-position: 45% center;
   background-repeat: no-repeat;
   background-size: cover; }
+  .hero .wrapper {
+    background-color: brown; }
 
 .home-about {
   padding: 7.5rem 0;
