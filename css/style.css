@@ -190,6 +190,56 @@ img {
 ul {
   list-style: none; }
 
+.navigation__overlay {
+  position: fixed;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(36, 36, 36, 0.85); }
+  .navigation__overlay--hidden {
+    display: none; }
+
+.nav {
+  position: fixed;
+  top: 0%;
+  right: 0%;
+  height: 100%;
+  width: 70%;
+  background-color: #242424;
+  padding: 5rem 0 5rem 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  transition: all .5s ease-in-out; }
+  .nav .close {
+    color: #fff;
+    position: absolute;
+    top: 3.5rem;
+    right: 3.5rem;
+    font-size: 2rem; }
+  .nav ul:last-child {
+    display: flex; }
+    .nav ul:last-child li {
+      margin-bottom: 0;
+      margin-right: 2.5rem; }
+  .nav li:not(:last-child) {
+    margin-bottom: 2.5rem; }
+  .nav a {
+    display: inline-block;
+    color: #eaeaea;
+    font-size: 1.8rem;
+    letter-spacing: .1rem; }
+    .nav a img {
+      height: 3rem;
+      width: auto;
+      object-fit: cover; }
+  .nav--hidden {
+    right: -70%; }
+
 .grid {
   display: grid; }
 
