@@ -1,3 +1,4 @@
+// Open and Close Navigation
 const navOverlay = document.querySelector('.navigation__overlay');
 const closeNavEl = document.querySelector('.close');
 const menu = document.querySelector('.menu');
@@ -23,3 +24,26 @@ function closeNav() {
 
 navOverlay.addEventListener('click', closeNav);
 closeNavEl.addEventListener('click', closeNav);
+
+// Accordion
+let accordionItem = document.querySelectorAll('.accordion__item');
+let accordionTop = document.querySelectorAll('.accordion__top');
+let accordionBottom = document.querySelectorAll('.accordion__bottom');
+let plusVertical = document.querySelectorAll('.vertical');
+
+for(let i = 0; i < accordionTop.length; i++) {
+    accordionTop[i].addEventListener('click', function() {
+
+        let panel = this.nextElementSibling;
+        
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+            plusVertical[i].style.clipPath = 'polygon(0 100%, 100% 100%, 100% 0, 0 0)';
+            accordionItem[i].style.paddingBottom = '0px';
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+            plusVertical[i].style.clipPath = 'polygon(0 50%, 100% 50%, 100% 50%, 0 50%)';
+            accordionItem[i].style.paddingBottom = '35px';
+        }
+    });
+};

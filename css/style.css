@@ -665,11 +665,12 @@ textarea {
         background-color: #595959;
         position: absolute;
         left: 50%;
-        transform: translateX(-50%); }
+        transform: translateX(-50%);
+        transition: all .3s ease-in-out; }
   .accordion__bottom {
-    padding: 0;
-    height: 0;
-    visibility: hidden; }
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease-in-out; }
 
 .instagram {
   padding: 7.5rem 0;
