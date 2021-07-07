@@ -1,14 +1,13 @@
 .hero {
     height: 100%;
     width: 100%;
-    background-image: url(../../images/hero-bg.jpg);
-    background-attachment: fixed;
-    background-position: 45% center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-    & .wrapper {
-        background-color: brown;
+    // margin-bottom: 12.5rem;
+    //padding-bottom: 5rem;
+    padding-bottom: 2.5rem;
+
+    @media only screen and (min-width: $medium-device) {
+        padding-bottom: 0;
+        height: 70%;
     }
 }
 
@@ -116,5 +115,9 @@
     &__bottom {
         background-color: $grey;
         padding: 3.5rem 0;
+
+        @media only screen and (min-width: $medium-device) {
+            padding: 7.5rem 0;
+        }
     }
 }

@@ -13,6 +13,10 @@ html, body {
     width: 90%;
     margin: 0 auto;
     display: flex;
+
+    @media only screen and (min-width: 1680px) {
+        width: 1600px;
+    }
 }
 
 img {
