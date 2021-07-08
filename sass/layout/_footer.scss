@@ -6,8 +6,10 @@
         @include sbfsc;
 
         @media only screen and (min-width: $medium-device) {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-direction: row !important;
         }
     }
 
@@ -15,6 +17,11 @@
         &:not(:last-child) {
             margin-bottom: 3.5rem;
         }
+
+        @media only screen and (min-width: $medium-device) {
+            width: 50%;
+        }
+
     }
 
     &__ul {

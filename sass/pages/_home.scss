@@ -112,6 +112,12 @@
         flex-direction: column;
     }
 
+    &__top {
+        @media only screen and (min-width: $medium-device) {
+            padding-bottom: 3.5rem;
+        }
+    }
+
     &__bottom {
         background-color: $grey;
         padding: 3.5rem 0;
