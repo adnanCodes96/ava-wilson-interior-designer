@@ -13,6 +13,11 @@ menu.addEventListener('click', () => {
     header.style.marginLeft = '-70%';
     body.style.transition = 'all .5s ease-in-out';
     header.style.transition = 'all .5s ease-in-out';
+
+    if(window.matchMedia("(min-width: 768px)")) {
+        body.style.marginLeft = '-40%';
+        header.style.marginLeft = '-40%';
+    }
 });
 
 function closeNav() {

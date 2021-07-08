@@ -18,16 +18,16 @@
 
     & .menu {
         cursor: pointer;
-        width: 3.5rem;
+        width: 2rem;
 
         &__line {
-            height: .3rem;
+            height: .2rem;
             width: 100%;
             background-color: $dark;
             border-radius: 5rem;
 
             &:not(:last-child) {
-                margin-bottom: .7rem;
+                margin-bottom: .4rem;
             }
         }
     }

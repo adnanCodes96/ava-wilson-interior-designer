@@ -201,14 +201,14 @@ img {
     padding: 1rem; }
   .header .menu {
     cursor: pointer;
-    width: 3.5rem; }
+    width: 2rem; }
     .header .menu__line {
-      height: .3rem;
+      height: .2rem;
       width: 100%;
       background-color: #242424;
       border-radius: 5rem; }
       .header .menu__line:not(:last-child) {
-        margin-bottom: .7rem; }
+        margin-bottom: .4rem; }
 
 ul {
   list-style: none; }
@@ -238,6 +238,9 @@ ul {
   align-items: flex-start;
   flex-direction: column;
   transition: all .5s ease-in-out; }
+  @media only screen and (min-width: 768px) {
+    .nav {
+      width: 40%; } }
   .nav .close {
     color: #fff;
     position: absolute;
@@ -667,6 +670,10 @@ textarea {
     justify-content: space-between;
     align-items: flex-start;
     flex-direction: column; }
+    @media only screen and (min-width: 768px) {
+      .footer .wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); } }
   .footer__item:not(:last-child) {
     margin-bottom: 3.5rem; }
   .footer__ul li:not(:last-child) {

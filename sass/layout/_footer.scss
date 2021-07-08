@@ -4,6 +4,11 @@
 
     & .wrapper {
         @include sbfsc;
+
+        @media only screen and (min-width: $medium-device) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 
     &__item {
