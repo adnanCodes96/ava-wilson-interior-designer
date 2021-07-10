@@ -5,6 +5,10 @@
 .work-approach {
     padding: 7.5rem 0;
 
+    @media only screen and (min-width: $medium-device) {
+        padding: 10rem 0;
+    }
+
     & .wrapper {
         @include sbfsc;
     }
