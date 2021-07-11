@@ -9,6 +9,11 @@
         padding-bottom: 0;
         height: 70%;
     }
+
+    @media only screen and (min-width: $large-device) {
+        padding-bottom: 0;
+        height: 100vh;
+    }
 }
 
 .home-about {
@@ -17,6 +22,34 @@
 
     & .wrapper {
         @include sbfsc;
+
+    }
+}
+
+.home__about--bottom {
+    @media only screen and (min-width: $large-device) {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 6rem;
+    }
+
+    & .text {
+        &:nth-of-type(1n) {
+            @media only screen and (min-width: $large-device) {
+                width: auto;
+                margin-right: 5rem;
+            }
+        }
+
+        &:nth-of-type(2n) {
+            @media only screen and (min-width: $large-device) {
+                width: 25rem;
+                margin-right: 5rem;
+            }
+        }
     }
 }
 
@@ -89,6 +122,10 @@
         max-height: 0;
         overflow: hidden;
         transition: max-height .3s ease-in-out;
+
+        @media only screen and (min-width: $large-device) {
+            width: 50%;
+        }
     }
 }
 
@@ -100,6 +137,25 @@
         justify-content: space-between;
         align-items: flex-start;
         flex-direction: column;
+
+        @media only screen and (min-width: $large-device) {
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+
+    &__top,
+    &__bottom {
+        @media only screen and (min-width: $large-device) {
+            width: 50%;
+            margin-bottom: 0;
+        }
+    }
+
+    & h2 {
+        @media only screen and (min-width: $large-device) {
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -110,6 +166,11 @@
         justify-content: space-between;
         align-items: flex-start;
         flex-direction: column;
+
+        @media only screen and (min-width: $large-device) {
+            flex-direction: row;
+            align-items: center;
+        }
     }
 
     &__top {
@@ -122,8 +183,26 @@
         background-color: $grey;
         padding: 3.5rem 0;
 
+        & .wrapper {
+            @media only screen and (min-width: $large-device) {
+                justify-content: flex-start;
+            }
+        }
+
         @media only screen and (min-width: $medium-device) {
             padding: 7.5rem 0;
+        }
+    }
+
+    &__item {
+        @media only screen and (min-width: $large-device) {
+            width: 50%;
+
+            &--2 {
+                @media only screen and (min-width: $large-device) {
+                    width: 40%;
+                }
+            }
         }
     }
 }

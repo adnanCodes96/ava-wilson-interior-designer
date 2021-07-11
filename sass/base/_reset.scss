@@ -26,3 +26,9 @@ img {
 ol {
     list-style-type: decimal;
 }
+
+main {
+    min-height: 100vh;
+    position: relative;
+    z-index: 2;
+}

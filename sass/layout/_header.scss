@@ -6,8 +6,13 @@
     width: 100%;
     padding: 1.5rem 0;
 
+    @media only screen and (min-width: $large-device) {
+        padding: 3.5rem 0;
+    }
+
     & .wrapper {
         @include sbc;
+        width: 95%;
     }
 
     & .logo {
@@ -16,11 +21,20 @@
         background-color: $grey;
         height: 4rem;
         width: 4rem;
+
+        @media only screen and (min-width: $large-device) {
+            height: 8rem;
+            width: 8rem;
+        }
     }
 
     & .menu {
         cursor: pointer;
         width: 2rem;
+
+        @media only screen and (min-width: $large-device) {
+            display: none;
+        }
 
         &__line {
             height: .2rem;

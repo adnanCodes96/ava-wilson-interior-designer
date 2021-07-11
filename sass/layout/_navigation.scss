@@ -44,21 +44,53 @@ ol {
         width: 40%;
     }
 
+    @media only screen and (min-width: $large-device) {
+        position: relative;
+        height: auto;
+        width: auto;
+        padding: 0 0 0 0;
+        align-items: center;
+        flex-direction: row;
+        background-color: transparent;
+    }
+
     & .close {
         color: $white;
         position: absolute;
         top: 3.5rem;
         right: 3.5rem;
         font-size: 2rem;
+
+        @media only screen and (min-width: $large-device) {
+            display: none;
+        }
     }
 
     & ul {
+        @media only screen and (min-width: $large-device) {
+            display: flex;
+        }
+
+        & li {
+            &:not(:last-child) {
+                margin-right: 2.5rem;
+            }
+        }
+
         &:last-child {
             display: flex;
+
+            @media only screen and (min-width: $large-device) {
+                margin-left: 7.5rem;
+            }
 
             & li {
                 margin-bottom: 0;
                 margin-right: 2.5rem;
+
+                @media only screen and (min-width: $large-device) {
+                    margin-right: 0rem;
+                }
             }
         }
     }
@@ -66,6 +98,11 @@ ol {
     & li {
         &:not(:last-child) {
             margin-bottom: 2.5rem;
+
+            @media only screen and (min-width: $large-device) {
+                margin-bottom: 0;
+            }
+
         }
     }
 
@@ -75,14 +112,35 @@ ol {
         font-size: 1.8rem;
         letter-spacing: .1rem;
 
+        @media only screen and (min-width: $large-device) {
+            color: $dark;
+            font-size: 1.6rem;
+            font-weight: 500;
+        }
+
         & img {
             height: 3rem;
             width: auto;
             object-fit: cover;
+
+            & svg path{
+                fill: #242424 !important;
+            }
+
+            @media only screen and (min-width: $large-device) {
+                height: 2rem;
+                margin: 0;
+                padding: 0;
+                display: inline-block;
+            }
         }
     }
 
     &--hidden {
         right: -70%;
+
+        @media only screen and (min-width: $large-device) {
+            right: 0;
+        }
     }
 }

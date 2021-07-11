@@ -30,6 +30,12 @@ function closeNav() {
 navOverlay.addEventListener('click', closeNav);
 closeNavEl.addEventListener('click', closeNav);
 
+if(window.matchMedia("(min-width: 1024px)")) {
+    nav.classList.add('nav--hidden');
+} else {
+    nav.classList.remove('nav--hidden');
+}
+
 // Accordion
 let accordionItem = document.querySelectorAll('.accordion__item');
 let accordionTop = document.querySelectorAll('.accordion__top');

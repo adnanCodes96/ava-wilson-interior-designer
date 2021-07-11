@@ -17,6 +17,10 @@ a {
   text-transform: uppercase;
   text-decoration: none;
   color: #242424; }
+  @media only screen and (min-width: 1024px) {
+    .logo {
+      font-size: 3.6rem;
+      line-height: 3.6rem; } }
 
 .heading {
   color: #242424;
@@ -96,6 +100,9 @@ a {
     .email {
       font-size: 2.4rem;
       font-weight: 2.4rem; } }
+  @media only screen and (min-width: 1024px) {
+    .email {
+      margin-bottom: 0; } }
   .email::after {
     content: '';
     position: absolute;
@@ -161,6 +168,11 @@ img {
 ol {
   list-style-type: decimal; }
 
+main {
+  min-height: 100vh;
+  position: relative;
+  z-index: 2; }
+
 .cta {
   border: 0.2rem solid #242424;
   display: inline-block;
@@ -202,9 +214,13 @@ ol {
   z-index: 5;
   width: 100%;
   padding: 1.5rem 0; }
+  @media only screen and (min-width: 1024px) {
+    .header {
+      padding: 3.5rem 0; } }
   .header .wrapper {
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    width: 95%; }
   .header .logo {
     display: flex;
     justify-content: center;
@@ -212,9 +228,16 @@ ol {
     background-color: #eaeaea;
     height: 4rem;
     width: 4rem; }
+    @media only screen and (min-width: 1024px) {
+      .header .logo {
+        height: 8rem;
+        width: 8rem; } }
   .header .menu {
     cursor: pointer;
     width: 2rem; }
+    @media only screen and (min-width: 1024px) {
+      .header .menu {
+        display: none; } }
     .header .menu__line {
       height: .2rem;
       width: 100%;
@@ -259,30 +282,72 @@ ol li {
   @media only screen and (min-width: 768px) {
     .nav {
       width: 40%; } }
+  @media only screen and (min-width: 1024px) {
+    .nav {
+      position: relative;
+      height: auto;
+      width: auto;
+      padding: 0 0 0 0;
+      align-items: center;
+      flex-direction: row;
+      background-color: transparent; } }
   .nav .close {
     color: #fff;
     position: absolute;
     top: 3.5rem;
     right: 3.5rem;
     font-size: 2rem; }
+    @media only screen and (min-width: 1024px) {
+      .nav .close {
+        display: none; } }
+  @media only screen and (min-width: 1024px) {
+    .nav ul {
+      display: flex; } }
+  .nav ul li:not(:last-child) {
+    margin-right: 2.5rem; }
   .nav ul:last-child {
     display: flex; }
+    @media only screen and (min-width: 1024px) {
+      .nav ul:last-child {
+        margin-left: 7.5rem; } }
     .nav ul:last-child li {
       margin-bottom: 0;
       margin-right: 2.5rem; }
+      @media only screen and (min-width: 1024px) {
+        .nav ul:last-child li {
+          margin-right: 0rem; } }
   .nav li:not(:last-child) {
     margin-bottom: 2.5rem; }
+    @media only screen and (min-width: 1024px) {
+      .nav li:not(:last-child) {
+        margin-bottom: 0; } }
   .nav a {
     display: inline-block;
     color: #eaeaea;
     font-size: 1.8rem;
     letter-spacing: .1rem; }
+    @media only screen and (min-width: 1024px) {
+      .nav a {
+        color: #242424;
+        font-size: 1.6rem;
+        font-weight: 500; } }
     .nav a img {
       height: 3rem;
       width: auto;
       object-fit: cover; }
+      .nav a img svg path {
+        fill: #242424 !important; }
+      @media only screen and (min-width: 1024px) {
+        .nav a img {
+          height: 2rem;
+          margin: 0;
+          padding: 0;
+          display: inline-block; } }
   .nav--hidden {
     right: -70%; }
+    @media only screen and (min-width: 1024px) {
+      .nav--hidden {
+        right: 0; } }
 
 .grid {
   display: grid; }
@@ -294,6 +359,9 @@ ol li {
   @media only screen and (min-width: 768px) {
     .hero .grid {
       grid-template-columns: repeat(2, 1fr); } }
+  @media only screen and (min-width: 1024px) {
+    .hero .grid {
+      grid-template-columns: repeat(16, 1fr); } }
   .hero .grid__item--1 {
     display: none; }
     @media only screen and (min-width: 768px) {
@@ -301,6 +369,12 @@ ol li {
         display: inline-block;
         grid-column: 1 / 2;
         grid-row: 1 / 2; } }
+    @media only screen and (min-width: 768px) {
+      .hero .grid__item--1 {
+        grid-column: 1 / 7;
+        background-color: #fff;
+        position: relative;
+        z-index: 2; } }
   .hero .grid__item--2 {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
@@ -317,6 +391,12 @@ ol li {
         grid-column: 1 / 2;
         grid-row: 1 / 2;
         padding: 9.5rem 0 5rem 0; } }
+    @media only screen and (min-width: 1024px) {
+      .hero .grid__item--2 {
+        grid-column: 2 / 8;
+        grid-row: 1 / 2;
+        background-color: transparent;
+        padding: 20rem 0 10rem 0; } }
     .hero .grid__item--2 .top,
     .hero .grid__item--2 .bottom {
       width: 90%;
@@ -331,6 +411,10 @@ ol li {
     @media only screen and (min-width: 768px) {
       .hero .grid__item--3 {
         grid-column: 2 / 4;
+        grid-row: 1 / 2; } }
+    @media only screen and (min-width: 1024px) {
+      .hero .grid__item--3 {
+        grid-column: 5 / -1;
         grid-row: 1 / 2; } }
     .hero .grid__item--3 img {
       height: 100%;
@@ -440,6 +524,9 @@ ol li {
     .instagram .grid {
       grid-template-columns: repeat(2, 1fr);
       gap: 1.5rem; } }
+  @media only screen and (min-width: 1024px) {
+    .instagram .grid {
+      grid-template-columns: repeat(4, 1fr); } }
   .instagram .grid__item {
     width: 100%;
     height: 0;
@@ -701,6 +788,12 @@ textarea {
 .footer {
   background-color: #242424;
   padding: 5rem 0 1rem 0; }
+  @media only screen and (min-width: 1024px) {
+    .footer {
+      position: sticky;
+      bottom: 0%;
+      left: 0%;
+      width: 100%; } }
   .footer .wrapper {
     justify-content: space-between;
     align-items: flex-start;
@@ -710,12 +803,22 @@ textarea {
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: flex-start;
-        flex-direction: row !important; } }
+        flex-direction: row; } }
+    @media only screen and (min-width: 1024px) {
+      .footer .wrapper {
+        flex-wrap: nowrap; } }
   .footer__item:not(:last-child) {
     margin-bottom: 3.5rem; }
   @media only screen and (min-width: 768px) {
     .footer__item {
       width: 50%; } }
+  @media only screen and (min-width: 1024px) {
+    .footer__item {
+      width: auto; } }
+  .footer__item--1 {
+    flex-grow: 2; }
+  .footer__item--2, .footer__item--3, .footer__item--4 {
+    flex-grow: 1; }
   .footer__ul li:not(:last-child) {
     margin-bottom: 1.8rem; }
   .footer__ul a {
@@ -729,6 +832,10 @@ textarea {
     .hero {
       padding-bottom: 0;
       height: 70%; } }
+  @media only screen and (min-width: 1024px) {
+    .hero {
+      padding-bottom: 0;
+      height: 100vh; } }
 
 .home-about {
   padding: 7.5rem 0;
@@ -737,6 +844,25 @@ textarea {
     justify-content: space-between;
     align-items: flex-start;
     flex-direction: column; }
+
+@media only screen and (min-width: 1024px) {
+  .home__about--bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 6rem; } }
+
+@media only screen and (min-width: 1024px) {
+  .home__about--bottom .text:nth-of-type(1n) {
+    width: auto;
+    margin-right: 5rem; } }
+
+@media only screen and (min-width: 1024px) {
+  .home__about--bottom .text:nth-of-type(2n) {
+    width: 25rem;
+    margin-right: 5rem; } }
 
 .implemented-projects {
   background-color: #fff;
@@ -790,6 +916,9 @@ textarea {
     max-height: 0;
     overflow: hidden;
     transition: max-height .3s ease-in-out; }
+    @media only screen and (min-width: 1024px) {
+      .accordion__bottom {
+        width: 50%; } }
 
 .instagram {
   padding: 7.5rem 0;
@@ -798,6 +927,17 @@ textarea {
     justify-content: space-between;
     align-items: flex-start;
     flex-direction: column; }
+    @media only screen and (min-width: 1024px) {
+      .instagram .wrapper {
+        flex-direction: row;
+        align-items: center; } }
+  @media only screen and (min-width: 1024px) {
+    .instagram__top, .instagram__bottom {
+      width: 50%;
+      margin-bottom: 0; } }
+  @media only screen and (min-width: 1024px) {
+    .instagram h2 {
+      margin-bottom: 0; } }
 
 .questions {
   background-color: #fff; }
@@ -805,15 +945,28 @@ textarea {
     justify-content: space-between;
     align-items: flex-start;
     flex-direction: column; }
+    @media only screen and (min-width: 1024px) {
+      .questions .wrapper {
+        flex-direction: row;
+        align-items: center; } }
   @media only screen and (min-width: 768px) {
     .questions__top {
       padding-bottom: 3.5rem; } }
   .questions__bottom {
     background-color: #eaeaea;
     padding: 3.5rem 0; }
+    @media only screen and (min-width: 1024px) {
+      .questions__bottom .wrapper {
+        justify-content: flex-start; } }
     @media only screen and (min-width: 768px) {
       .questions__bottom {
         padding: 7.5rem 0; } }
+  @media only screen and (min-width: 1024px) {
+    .questions__item {
+      width: 50%; } }
+  @media only screen and (min-width: 1024px) and (min-width: 1024px) {
+    .questions__item--2 {
+      width: 40%; } }
 
 .about {
   padding-top: 12rem; }

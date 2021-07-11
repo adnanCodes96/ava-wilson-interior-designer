@@ -2,6 +2,13 @@
     background-color: $dark;
     padding: 5rem 0 1rem 0;
 
+    @media only screen and (min-width: $large-device) {
+        position: sticky;
+        bottom: 0%;
+        left: 0%;
+        width: 100%;
+    }
+
     & .wrapper {
         @include sbfsc;
 
@@ -9,7 +16,11 @@
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: flex-start;
-            flex-direction: row !important;
+            flex-direction: row;
+        }
+
+        @media only screen and (min-width: $large-device) {
+            flex-wrap: nowrap;
         }
     }
 
@@ -20,6 +31,20 @@
 
         @media only screen and (min-width: $medium-device) {
             width: 50%;
+        }
+
+        @media only screen and (min-width: $large-device) {
+            width: auto;
+        }
+
+        &--1 {
+            flex-grow: 2;
+        }
+
+        &--2,
+        &--3,
+        &--4 {
+            flex-grow: 1;
         }
 
     }
