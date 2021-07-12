@@ -1,9 +1,16 @@
 .about {
     padding-top: 12rem;
+    background-color: $white;
+
+    @media only screen and (min-width: $large-device) {
+        padding-top: 0;
+        height: calc(100vh + 20rem);
+    }
 }
 
 .work-approach {
     padding: 7.5rem 0;
+    background-color: $white;
 
     @media only screen and (min-width: $medium-device) {
         padding: 10rem 0;
@@ -11,6 +18,15 @@
 
     & .wrapper {
         @include sbfsc;
+    }
+
+    &__list {
+        @media only screen and (min-width: $large-device) {
+            width: 60%;
+            display: flex;
+            justify-content: space-between;
+            margin: 5rem 0;
+        }
     }
 
     & ul {
