@@ -1,8 +1,15 @@
 .contact {
     padding: 7.5rem 0;
+    background-color: $white;
 
     & .wrapper {
         @include sbfsc;
+
+        @media only screen and (min-width: $large-device) {
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-direction: row;
+        }
     }
 
     &__top {
@@ -11,23 +18,54 @@
         @media only screen and (min-width: $medium-device) {
             width: 55%;
         }
+
+        @media only screen and (min-width: $large-device) {
+            width: 40%;
+            margin-bottom: 0;
+        }
     }
 
     &__bottom {
         width: 100%;
+
+        @media only screen and (min-width: $large-device) {
+            width: 50%;
+        }
     }
 
     &__intro {
         padding: 12rem 0 0rem 0;
+        background-color: $white;
+
+        @media only screen and (min-width: $medium-device) {
+            height: 85%;
+        }
+
+        @media only screen and (min-width: $large-device) {
+            height: 70vh;
+            padding: 0;
+        }
 
         &--bottom {
             @media only screen and (min-width: $medium-device) {
                 width: 60%;
             }
-        }
 
-        @media only screen and (min-width: $medium-device) {
-            height: 85%;
+            @media only screen and (min-width: $large-device) {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                width: 100%;
+
+                & .text {
+                    width: 45%;
+                    margin-bottom: 0;
+                }
+
+                & .email {
+                    width: 50%;
+                }
+            }
         }
 
         & .wrapper {
@@ -36,6 +74,11 @@
             @media only screen and (min-width: $medium-device) {
                 height: 100%;
             }
+
+            @media only screen and (min-width: $large-device) {
+                justify-content: center;
+            }
+
         }
     }
 }
@@ -50,10 +93,22 @@
 
     & .wrapper {
         @include sbfsc;
+
+        @media only screen and (min-width: $large-device) {
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: row;
+        }
     }
 
     &__top {
         margin-bottom: 3rem;
+
+        @media only screen and (min-width: $large-device) {
+            margin-bottom: 0;
+            width: 50%;
+        }
+
     }
 
     &__bottom {
@@ -66,6 +121,10 @@
             align-items: center;
             flex-direction: row;
             width: 60%;
+        }
+
+        @media only screen and (min-width: $large-device) {
+            width: 30%;
         }
     }
 }

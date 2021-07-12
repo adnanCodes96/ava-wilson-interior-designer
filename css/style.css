@@ -784,6 +784,9 @@ ol li {
   flex-direction: column;
   width: 100%;
   margin-top: 5rem; }
+  @media only screen and (min-width: 1024px) {
+    .form {
+      margin-top: 0; } }
   .form__top {
     width: 100%;
     display: flex;
@@ -1129,26 +1132,55 @@ textarea {
         background-color: #242424; }
 
 .contact {
-  padding: 7.5rem 0; }
+  padding: 7.5rem 0;
+  background-color: #fff; }
   .contact .wrapper {
     justify-content: space-between;
     align-items: flex-start;
     flex-direction: column; }
+    @media only screen and (min-width: 1024px) {
+      .contact .wrapper {
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: row; } }
   .contact__top {
     margin-bottom: 3.5rem; }
     @media only screen and (min-width: 768px) {
       .contact__top {
         width: 55%; } }
+    @media only screen and (min-width: 1024px) {
+      .contact__top {
+        width: 40%;
+        margin-bottom: 0; } }
   .contact__bottom {
     width: 100%; }
+    @media only screen and (min-width: 1024px) {
+      .contact__bottom {
+        width: 50%; } }
   .contact__intro {
-    padding: 12rem 0 0rem 0; }
-    @media only screen and (min-width: 768px) {
-      .contact__intro--bottom {
-        width: 60%; } }
+    padding: 12rem 0 0rem 0;
+    background-color: #fff; }
     @media only screen and (min-width: 768px) {
       .contact__intro {
         height: 85%; } }
+    @media only screen and (min-width: 1024px) {
+      .contact__intro {
+        height: 70vh;
+        padding: 0; } }
+    @media only screen and (min-width: 768px) {
+      .contact__intro--bottom {
+        width: 60%; } }
+    @media only screen and (min-width: 1024px) {
+      .contact__intro--bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%; }
+        .contact__intro--bottom .text {
+          width: 45%;
+          margin-bottom: 0; }
+        .contact__intro--bottom .email {
+          width: 50%; } }
     .contact__intro .wrapper {
       justify-content: space-between;
       align-items: flex-start;
@@ -1156,6 +1188,9 @@ textarea {
       @media only screen and (min-width: 768px) {
         .contact__intro .wrapper {
           height: 100%; } }
+      @media only screen and (min-width: 1024px) {
+        .contact__intro .wrapper {
+          justify-content: center; } }
 
 .social {
   background-color: #eaeaea;
@@ -1167,8 +1202,17 @@ textarea {
     justify-content: space-between;
     align-items: flex-start;
     flex-direction: column; }
+    @media only screen and (min-width: 1024px) {
+      .social .wrapper {
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row; } }
   .social__top {
     margin-bottom: 3rem; }
+    @media only screen and (min-width: 1024px) {
+      .social__top {
+        margin-bottom: 0;
+        width: 50%; } }
   .social__bottom {
     display: flex;
     justify-content: space-between;
@@ -1181,3 +1225,6 @@ textarea {
         align-items: center;
         flex-direction: row;
         width: 60%; } }
+    @media only screen and (min-width: 1024px) {
+      .social__bottom {
+        width: 30%; } }
