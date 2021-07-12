@@ -199,3 +199,11 @@ a {
         }
     }
 }
+
+.services {
+    &__intro {
+        & .text {
+            width: 35%;
+        }
+    }
+}

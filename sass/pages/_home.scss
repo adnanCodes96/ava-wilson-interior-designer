@@ -81,6 +81,7 @@
 
 .accordion {
     margin: 5rem 0 8rem 0;
+    width: 100%;
 
     &__item {
         border-bottom: .1rem solid $grey-light;
@@ -91,6 +92,22 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        cursor: pointer;
+
+        & h5 {
+            transition: all .3s ease-in-out;
+        }
+
+        &:hover {
+            & h5 {
+                color: $dark;
+            }
+
+            & .plus .horisontal,
+            & .plus .vertical {
+                background-color: $dark;
+            }
+        }
 
         & .plus {
             height: 1rem;
@@ -98,17 +115,18 @@
             position: relative;
 
             & .horisontal {
-                height: .1rem;
+                height: .2rem;
                 width: 100%;
                 background-color: $grey-dark;
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
+                transition: all .3s ease-in-out;
             }
 
             & .vertical {
                 height: 100%;
-                width: .1rem;
+                width: .2rem;
                 background-color: $grey-dark;
                 position: absolute;
                 left: 50%;

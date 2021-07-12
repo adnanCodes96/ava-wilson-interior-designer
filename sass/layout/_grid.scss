@@ -419,6 +419,68 @@
         &__item {
             padding: 5rem 0;
             border-bottom: .1rem solid $grey;
+
+            @media only screen and (min-width: $large-device) {
+                border-bottom: 0;
+            }
+
+            & .wrapper {
+                @media only screen and (min-width: $large-device) {
+                    justify-content: space-between;
+                }
+            }
+
+            &--1,
+            &--2,
+            &--3,
+            &--4 {
+                @media only screen and (min-width: $large-device) {
+                    border-top: .1rem solid $grey;
+                    margin-bottom: 10rem;
+                }
+
+                & .services__img {
+                    display: none;
+
+                    @media only screen and (min-width: $large-device) {
+                        display: inline-block;
+                        width: 37rem;
+                        height: 49rem;
+                        margin-top: -7.5rem;
+                        position: relative;
+                        z-index: 1;
+
+                        & img {
+                            height: 100%;
+                            width: 100%;
+                            object-fit: cover;
+                        }
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: -2rem;
+                            left: -2rem;
+                            z-index: -1;
+                            height: 100%;
+                            width: 100%;
+                            background-color: $grey-light;
+                        }
+                    }
+                }
+
+                & .services__content {
+                    @media only screen and (min-width: $large-device) {
+                        width: 40%;
+                    }
+                }
+            }
+
+            &--4 {
+                @media only screen and (min-width: $large-device) {
+                    margin-bottom: 0;
+                }
+            }
         }
     }
 }

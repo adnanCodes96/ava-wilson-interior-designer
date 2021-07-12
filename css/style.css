@@ -145,6 +145,9 @@ a {
   .social__link:hover::after {
     height: .3rem; }
 
+.services__intro .text {
+  width: 35%; }
+
 * {
   margin: 0;
   padding: 0;
@@ -681,6 +684,45 @@ ol li {
   .services .grid__item {
     padding: 5rem 0;
     border-bottom: 0.1rem solid #eaeaea; }
+    @media only screen and (min-width: 1024px) {
+      .services .grid__item {
+        border-bottom: 0; } }
+    @media only screen and (min-width: 1024px) {
+      .services .grid__item .wrapper {
+        justify-content: space-between; } }
+    @media only screen and (min-width: 1024px) {
+      .services .grid__item--1, .services .grid__item--2, .services .grid__item--3, .services .grid__item--4 {
+        border-top: 0.1rem solid #eaeaea;
+        margin-bottom: 10rem; } }
+    .services .grid__item--1 .services__img, .services .grid__item--2 .services__img, .services .grid__item--3 .services__img, .services .grid__item--4 .services__img {
+      display: none; }
+      @media only screen and (min-width: 1024px) {
+        .services .grid__item--1 .services__img, .services .grid__item--2 .services__img, .services .grid__item--3 .services__img, .services .grid__item--4 .services__img {
+          display: inline-block;
+          width: 37rem;
+          height: 49rem;
+          margin-top: -7.5rem;
+          position: relative;
+          z-index: 1; }
+          .services .grid__item--1 .services__img img, .services .grid__item--2 .services__img img, .services .grid__item--3 .services__img img, .services .grid__item--4 .services__img img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover; }
+          .services .grid__item--1 .services__img::before, .services .grid__item--2 .services__img::before, .services .grid__item--3 .services__img::before, .services .grid__item--4 .services__img::before {
+            content: '';
+            position: absolute;
+            top: -2rem;
+            left: -2rem;
+            z-index: -1;
+            height: 100%;
+            width: 100%;
+            background-color: #f2f2f2; } }
+    @media only screen and (min-width: 1024px) {
+      .services .grid__item--1 .services__content, .services .grid__item--2 .services__content, .services .grid__item--3 .services__content, .services .grid__item--4 .services__content {
+        width: 40%; } }
+    @media only screen and (min-width: 1024px) {
+      .services .grid__item--4 {
+        margin-bottom: 0; } }
 
 .about .grid {
   grid-template-columns: 1fr;
@@ -885,28 +927,38 @@ textarea {
     flex-direction: column; }
 
 .accordion {
-  margin: 5rem 0 8rem 0; }
+  margin: 5rem 0 8rem 0;
+  width: 100%; }
   .accordion__item {
     border-bottom: 0.1rem solid #f2f2f2; }
   .accordion__top {
     padding: 3.5rem 0;
     display: flex;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    cursor: pointer; }
+    .accordion__top h5 {
+      transition: all .3s ease-in-out; }
+    .accordion__top:hover h5 {
+      color: #242424; }
+    .accordion__top:hover .plus .horisontal,
+    .accordion__top:hover .plus .vertical {
+      background-color: #242424; }
     .accordion__top .plus {
       height: 1rem;
       width: 1rem;
       position: relative; }
       .accordion__top .plus .horisontal {
-        height: .1rem;
+        height: .2rem;
         width: 100%;
         background-color: #595959;
         position: absolute;
         top: 50%;
-        transform: translateY(-50%); }
+        transform: translateY(-50%);
+        transition: all .3s ease-in-out; }
       .accordion__top .plus .vertical {
         height: 100%;
-        width: .1rem;
+        width: .2rem;
         background-color: #595959;
         position: absolute;
         left: 50%;
@@ -1003,15 +1055,25 @@ textarea {
   background-color: #fff; }
 
 .services {
-  padding: 7.5rem 0; }
+  padding: 7.5rem 0;
+  background-color: #fff; }
   .services__intro {
     padding: 12rem 0 5rem 0;
-    border-bottom: 0.1rem solid #eaeaea; }
+    border-bottom: 0.1rem solid #eaeaea;
+    background-color: #fff; }
+    @media only screen and (min-width: 1024px) {
+      .services__intro {
+        height: 70vh;
+        border-bottom: none; } }
     .services__intro .wrapper {
       height: 100%;
       justify-content: space-between;
       align-items: flex-start;
       flex-direction: column; }
+      @media only screen and (min-width: 1024px) {
+        .services__intro .wrapper {
+          justify-content: center;
+          align-items: flex-start; } }
   .services__ul {
     list-style: none; }
     .services__ul li {

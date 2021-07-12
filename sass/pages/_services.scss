@@ -1,15 +1,26 @@
 .services {
     padding: 7.5rem 0;
-
-
+    background-color: $white;
 
     &__intro {
         padding: 12rem 0 5rem 0;
         border-bottom: .1rem solid $grey;
+        background-color: $white;
+
+        @media only screen and (min-width: $large-device) {
+            height: 70vh;
+            border-bottom: none;
+        }
 
         & .wrapper {
             height: 100%;
             @include sbfsc;
+
+            @media only screen and (min-width: $large-device) {
+                justify-content: center;
+                align-items: flex-start;
+                
+            }
         }
     }
 
