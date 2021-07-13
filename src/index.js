@@ -1,3 +1,5 @@
+import animations from './animations.js';
+
 // Open and Close Navigation
 const navOverlay = document.querySelector('.navigation__overlay');
 const closeNavEl = document.querySelector('.close');
