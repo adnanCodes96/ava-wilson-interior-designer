@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@keyframes loader {
+  0% {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%); }
+  50% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+  100% {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%); } }
+
 html {
   font-size: 62.5%; }
 
@@ -165,6 +173,19 @@ html, body {
     .wrapper {
       width: 1600px; } }
 
+.loader {
+  position: fixed;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  left: 0%;
+  z-index: 1000;
+  height: 100%;
+  width: 100%;
+  background-color: #f2f2f2;
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  animation: loader 1.5s ease-in-out; }
+
 img {
   vertical-align: bottom; }
 
@@ -295,35 +316,28 @@ ol li {
       flex-direction: row;
       background-color: transparent; } }
   .nav .close {
-    color: #fff;
     position: absolute;
-    top: 3.5rem;
-    right: 3.5rem;
-    font-size: 2rem; }
+    top: 2rem;
+    right: 2rem; }
     @media only screen and (min-width: 1024px) {
       .nav .close {
         display: none; } }
   @media only screen and (min-width: 1024px) {
-    .nav ul {
-      display: flex; } }
-  .nav ul li:not(:last-child) {
-    margin-right: 2.5rem; }
-  .nav ul:last-child {
-    display: flex; }
-    @media only screen and (min-width: 1024px) {
-      .nav ul:last-child {
-        margin-left: 7.5rem; } }
-    .nav ul:last-child li {
-      margin-bottom: 0;
-      margin-right: 2.5rem; }
-      @media only screen and (min-width: 1024px) {
-        .nav ul:last-child li {
-          margin-right: 0rem; } }
-  .nav li:not(:last-child) {
+    .nav .list--1 {
+      display: flex;
+      margin-right: 5rem; } }
+  .nav .list--1 li:not(:last-child) {
     margin-bottom: 2.5rem; }
     @media only screen and (min-width: 1024px) {
-      .nav li:not(:last-child) {
-        margin-bottom: 0; } }
+      .nav .list--1 li:not(:last-child) {
+        margin-bottom: 0rem;
+        margin-right: 2.5rem; } }
+  .nav .list--2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; }
+    .nav .list--2 li:not(:last-child) {
+      margin-right: 1.5rem; }
   .nav a {
     display: inline-block;
     color: #eaeaea;
@@ -351,6 +365,38 @@ ol li {
     @media only screen and (min-width: 1024px) {
       .nav--hidden {
         right: 0; } }
+  .nav__link {
+    position: relative;
+    overflow: hidden; }
+    .nav__link::before, .nav__link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      height: .2rem;
+      width: 0%;
+      background-color: #242424;
+      transition: all .3s ease-in-out; }
+    .nav__link::before {
+      left: 50%; }
+    .nav__link::after {
+      right: 50%; }
+    .nav__link:hover::before, .nav__link:hover::after {
+      width: 50%; }
+    .nav__link--active {
+      position: relative;
+      overflow: hidden; }
+      .nav__link--active::before, .nav__link--active::after {
+        content: '';
+        position: absolute;
+        bottom: 0%;
+        height: .2rem;
+        width: 50%;
+        background-color: #242424;
+        transition: all .3s ease-in-out; }
+      .nav__link--active::before {
+        left: 50%; }
+      .nav__link--active::after {
+        right: 50%; }
 
 .grid {
   display: grid; }
@@ -358,7 +404,8 @@ ol li {
 .hero .grid {
   grid-template-columns: 1fr;
   height: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  background-color: #fff; }
   @media only screen and (min-width: 768px) {
     .hero .grid {
       grid-template-columns: repeat(2, 1fr); } }
@@ -372,9 +419,15 @@ ol li {
         display: inline-block;
         grid-column: 1 / 2;
         grid-row: 1 / 2; } }
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 1024px) {
       .hero .grid__item--1 {
         grid-column: 1 / 7;
+        background-color: #fff;
+        position: relative;
+        z-index: 2; } }
+    @media only screen and (min-width: 1366px) {
+      .hero .grid__item--1 {
+        grid-column: 1 / 6;
         background-color: #fff;
         position: relative;
         z-index: 2; } }
@@ -419,6 +472,9 @@ ol li {
       .hero .grid__item--3 {
         grid-column: 5 / -1;
         grid-row: 1 / 2; } }
+    @media only screen and (min-width: 1024px) {
+      .hero .grid__item--3 {
+        padding-bottom: 7.5rem; } }
     .hero .grid__item--3 img {
       height: 100%;
       width: 100%;
@@ -703,7 +759,12 @@ ol li {
           height: 49rem;
           margin-top: -7.5rem;
           position: relative;
-          z-index: 1; }
+          z-index: 1; } }
+  @media only screen and (min-width: 1024px) and (min-width: 1366px) {
+    .services .grid__item--1 .services__img, .services .grid__item--2 .services__img, .services .grid__item--3 .services__img, .services .grid__item--4 .services__img {
+      width: 49rem;
+      height: 69rem; } }
+      @media only screen and (min-width: 1024px) {
           .services .grid__item--1 .services__img img, .services .grid__item--2 .services__img img, .services .grid__item--3 .services__img img, .services .grid__item--4 .services__img img {
             height: 100%;
             width: 100%;
@@ -914,6 +975,11 @@ textarea {
     justify-content: space-between;
     align-items: flex-start;
     flex-direction: column; }
+  @media only screen and (min-width: 1366px) {
+    .home-about h2 {
+      width: 80%;
+      font-size: 7rem;
+      line-height: 7rem; } }
 
 @media only screen and (min-width: 1024px) {
   .home__about--bottom {
@@ -929,10 +995,20 @@ textarea {
     width: auto;
     margin-right: 5rem; } }
 
+@media only screen and (min-width: 1366px) {
+  .home__about--bottom .text:nth-of-type(1n) {
+    width: auto;
+    margin-right: 7.5rem; } }
+
 @media only screen and (min-width: 1024px) {
   .home__about--bottom .text:nth-of-type(2n) {
     width: 25rem;
     margin-right: 5rem; } }
+
+@media only screen and (min-width: 1366px) {
+  .home__about--bottom .text:nth-of-type(2n) {
+    width: 35rem;
+    margin-right: 7.5rem; } }
 
 .implemented-projects {
   background-color: #fff;
@@ -1068,10 +1144,13 @@ textarea {
     flex-direction: column; }
   @media only screen and (min-width: 1024px) {
     .work-approach__list {
-      width: 60%;
+      width: auto;
       display: flex;
       justify-content: space-between;
       margin: 5rem 0; } }
+  @media only screen and (min-width: 1366px) {
+    .work-approach__list ul {
+      width: 53rem; } }
   .work-approach ul {
     margin-bottom: 2rem; }
     .work-approach ul li:not(:last-child) {

@@ -24,6 +24,14 @@
         @include sbfsc;
 
     }
+
+    & h2 {
+        @media only screen and (min-width: $larger-device) {
+            width: 80%;
+            font-size: 7rem;
+            line-height: 7rem;
+        }
+    }
 }
 
 .home__about--bottom {
@@ -42,12 +50,22 @@
                 width: auto;
                 margin-right: 5rem;
             }
+
+            @media only screen and (min-width: $larger-device) {
+                width: auto;
+                margin-right: 7.5rem;
+            }
         }
 
         &:nth-of-type(2n) {
             @media only screen and (min-width: $large-device) {
                 width: 25rem;
                 margin-right: 5rem;
+            }
+
+            @media only screen and (min-width: $larger-device) {
+                width: 35rem;
+                margin-right: 7.5rem;
             }
         }
     }

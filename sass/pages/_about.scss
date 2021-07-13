@@ -22,10 +22,16 @@
 
     &__list {
         @media only screen and (min-width: $large-device) {
-            width: 60%;
+            width: auto;
             display: flex;
             justify-content: space-between;
             margin: 5rem 0;
+        }
+
+        & ul {
+            @media only screen and (min-width: $larger-device) {
+                width: 53rem;
+            }
         }
     }
 

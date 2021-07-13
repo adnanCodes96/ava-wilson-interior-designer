@@ -8,6 +8,7 @@
         // grid-template-columns: repeat(16, 1fr); for big screen
         height: 100%;
         overflow: hidden;
+        background-color: $white;
 
         @media only screen and (min-width: $medium-device) {
             grid-template-columns: repeat(2, 1fr);
@@ -16,7 +17,6 @@
         @media only screen and (min-width: $large-device) {
             grid-template-columns: repeat(16, 1fr);
         }
-
 
         &__item {
             &--1 {
@@ -30,8 +30,15 @@
                     grid-row: 1 / 2;
                 }
 
-                @media only screen and (min-width: $medium-device) {
+                @media only screen and (min-width: $large-device) {
                     grid-column: 1 / 7;
+                    background-color: $white;
+                    position: relative;
+                    z-index: 2;
+                }
+
+                @media only screen and (min-width: $larger-device) {
+                    grid-column: 1 / 6;
                     background-color: $white;
                     position: relative;
                     z-index: 2;
@@ -96,6 +103,10 @@
                 @media only screen and (min-width: $large-device) {
                     grid-column: 5 / -1;
                     grid-row: 1 / 2;
+                }
+
+                @media only screen and (min-width: $large-device) {
+                    padding-bottom: 7.5rem;
                 }
             
                 
@@ -449,6 +460,11 @@
                         margin-top: -7.5rem;
                         position: relative;
                         z-index: 1;
+
+                        @media only screen and (min-width: $larger-device) {
+                            width: 49rem;
+                            height: 69rem;
+                        }
 
                         & img {
                             height: 100%;
