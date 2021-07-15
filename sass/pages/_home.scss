@@ -1,13 +1,9 @@
 .hero {
-    height: 100%;
+    height: 98vh;
     width: 100%;
-    // margin-bottom: 12.5rem;
-    //padding-bottom: 5rem;
-    padding-bottom: 2.5rem;
 
     @media only screen and (min-width: $medium-device) {
-        padding-bottom: 0;
-        height: 70%;
+        height: 66vh;
     }
 
     @media only screen and (min-width: $large-device) {
@@ -17,8 +13,16 @@
 }
 
 .home-about {
-    padding: 7.5rem 0;
+    padding: 6rem 0;
     background-color: $grey;
+
+    @media only screen and (min-width: $large-device) {
+        padding: 7rem 0;
+    }
+
+    @media only screen and (min-width: $extra-large-device) {
+        padding: 10rem 0;
+    }
 
     & .wrapper {
         @include sbfsc;
@@ -26,7 +30,9 @@
     }
 
     & h2 {
-        @media only screen and (min-width: $larger-device) {
+        margin-bottom: 3rem;
+
+        @media only screen and (min-width: $extra-large-device) {
             width: 80%;
             font-size: 7rem;
             line-height: 7rem;
@@ -51,7 +57,7 @@
                 margin-right: 5rem;
             }
 
-            @media only screen and (min-width: $larger-device) {
+            @media only screen and (min-width: $extra-large-device) {
                 width: auto;
                 margin-right: 7.5rem;
             }
@@ -63,7 +69,7 @@
                 margin-right: 5rem;
             }
 
-            @media only screen and (min-width: $larger-device) {
+            @media only screen and (min-width: $extra-large-device) {
                 width: 35rem;
                 margin-right: 7.5rem;
             }
@@ -73,22 +79,99 @@
 
 .implemented-projects {
     background-color: $white;
-    padding: 7.5rem 0;
+    padding: 6rem 0;
+    text-align: center;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     flex-direction: column;
-    width: 100%;
 
     & .wrapper {
-        justify-content: center;
-        text-align: center;
+        @include center-center;
+    }
+
+    &__container {
+        margin-top: 6rem;
+        width: 100%;
+        max-width: 160rem;
+
+        @media only screen and (min-width: $extra-large-device) {
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        padding: 7.5rem 0;
+        overflow: hidden;
+
+        .top-line,
+        .bottom-line {
+            background-color: $dark;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: .1rem;
+        }
+
+        .top-line {
+            height: 10rem;
+            top: 0%;
+        }
+
+        .bottom-line {
+            height: calc(100% - 20rem);
+            bottom: 0%;
+        }
+
+        & .image {
+            width: 40%;
+            height: 0;
+            padding-top: 40%;
+            @include bgs;
+        }
+
+        & .text {
+            position: absolute;
+            top: 13rem;
+            left: 0%;
+            width: 100%;
+        }
+
+        &--1 {
+            justify-content: flex-start;
+            & .image {
+                background-image: url(../../images/water-stadium.jpg);
+            }
+        }
+
+        &--2 {
+            justify-content: flex-end;
+            & .image {
+                background-image: url(../../images/udaltsova.jpg);
+            }
+        }
+
+        &--3 {
+            justify-content: flex-start;
+            & .image {
+                background-image: url(../../images/prechisenka.jpg);
+            }
+        }
+    }
+
+    & .cta__container {
+        padding: 6rem 0 3rem 0;
     }
 }
 
 .home-services {
     background-color: $white;
     padding: 7.5rem 0;
+
+    @media only screen and (min-width: $extra-large-device) {
+        padding: 10rem 0;
+    }
 
     & .wrapper {
         justify-content: space-between;
@@ -166,8 +249,12 @@
 }
 
 .instagram {
-    padding: 7.5rem 0;
+    padding: 7.5rem 0 3rem 0;
     background-color: $white;
+
+    @media only screen and (min-width: $large-device) {
+        padding: 7.5rem 0 7.5rem 0;
+    }
 
     & .wrapper {
         justify-content: space-between;
@@ -189,9 +276,12 @@
     }
 
     & h2 {
+        margin-bottom: 3rem;
+
         @media only screen and (min-width: $large-device) {
             margin-bottom: 0;
         }
+        
     }
 }
 
@@ -207,17 +297,32 @@
             flex-direction: row;
             align-items: center;
         }
+
     }
 
     &__top {
+        padding: 3rem 0;
+
         @media only screen and (min-width: $medium-device) {
-            padding-bottom: 3.5rem;
+            padding-bottom: 5rem;
+        }
+
+        @media only screen and (min-width: $large-device) {
+            padding-bottom: 8rem;
         }
     }
 
     &__bottom {
         background-color: $grey;
-        padding: 3.5rem 0;
+        padding: 6rem 0;
+
+        @media only screen and (min-width: $medium-device) {
+            padding: 10rem 0;
+        }
+
+        & .social-link {
+            margin-bottom: 3rem;
+        }
 
         & .wrapper {
             @media only screen and (min-width: $large-device) {
@@ -225,9 +330,6 @@
             }
         }
 
-        @media only screen and (min-width: $medium-device) {
-            padding: 7.5rem 0;
-        }
     }
 
     &__item {

@@ -34,8 +34,18 @@
     }
 
     &__intro {
-        padding: 12rem 0 0rem 0;
+        padding: 12rem 0 6rem 0;
         background-color: $white;
+
+        & h2 {
+            margin-bottom: 6rem;
+        }
+
+        & .text {
+            @media only screen and (min-width: $large-device) {
+                margin-right: 5rem;
+            }
+        }
 
         @media only screen and (min-width: $medium-device) {
             height: 85%;
@@ -53,13 +63,18 @@
 
             @media only screen and (min-width: $large-device) {
                 display: flex;
-                justify-content: space-between;
-                align-items: flex-start;
+                justify-content: flex-start;
+                align-items: center;
                 width: 100%;
 
                 & .text {
                     width: 45%;
                     margin-bottom: 0;
+
+                    @media only screen and (min-width: $extra-large-device) {
+                        width: 34%;
+                        margin-right: 20rem !important;
+                    }
                 }
 
                 & .email {
@@ -114,6 +129,14 @@
     &__bottom {
         display: flex;
         @include sbfsc;
+
+        & .social-link:not(:last-child) {
+            margin-bottom: 1.5rem;
+
+            @media only screen and (min-width: $large-device) {
+                margin-bottom: 0;
+            }
+        }
 
         @media only screen and (min-width: $medium-device) {
             display: flex;

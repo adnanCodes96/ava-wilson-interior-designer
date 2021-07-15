@@ -1,11 +1,31 @@
 import animations from './animations.js';
 
+//Page transition
+window.addEventListener('load', () => {
+    let loader = document.querySelector('.loader');
+})
+
+//Scale Header on scrroll
+const header = document.querySelector('.header');
+const logo = document.querySelector('.logo');
+
+if(window.matchMedia("(min-width: 1024px)")) {
+    window.addEventListener('scroll', () => {
+        let scrollTop = window.pageYOffset;
+
+        if(scrollTop > 0) {
+            header.classList.add('header--scrolled');
+        } else {
+            header.classList.remove('header--scrolled');
+        }
+    })
+}
+
 // Open and Close Navigation
 const navOverlay = document.querySelector('.navigation__overlay');
 const closeNavEl = document.querySelector('.close');
 const menu = document.querySelector('.menu');
 const nav = document.querySelector('.nav');
-const header = document.querySelector('.header');
 const body = document.body;
 
 menu.addEventListener('click', () => {
@@ -37,6 +57,14 @@ if(window.matchMedia("(min-width: 1024px)")) {
 } else {
     nav.classList.remove('nav--hidden');
 }
+
+//Paralax scrolling
+window.addEventListener('scroll', () => {
+    let wScroll = window.pageYOffset / 5;
+    const heroBg = document.getElementById('heroBg');
+
+    heroBg.style.backgroundPositionY = `${wScroll}px`;
+})
 
 // Accordion
 let accordionItem = document.querySelectorAll('.accordion__item');

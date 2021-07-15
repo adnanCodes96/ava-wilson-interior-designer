@@ -29,53 +29,97 @@ a {
 }
 
 .heading {
-    color: $dark;
-    font-weight: 400;
-
-    @media only screen and (min-width: $medium-device) {
-        font-weight: 500;
-    }
 
     &--primary {
-        font-size: 3.4rem;
-        margin-bottom: 1.8rem;
+        color: #1a1a1a;
+        font-size: 4rem;
+        font-weight: 400;
+        line-height: 5rem;
+        margin-bottom: 2rem;
 
         @media only screen and (min-width: $medium-device) {
-            font-size: 5rem;
-            line-height: 5rem;
-            margin-bottom: 2.5rem;
+            font-size: 6rem;
+            line-height: 8rem;
+        }
+
+        @media only screen and (min-width: $large-device) {
+            font-size: 8rem;
+            line-height: 8rem;
         }
     }
 
     &--secondary {
-        font-size: 2.8rem;
-        margin-bottom: 3rem;
-        line-height: 1.2;
+        color: $dark;
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+        font-weight: 400;
+
+        @media only screen and (min-width: $medium-device) {
+            font-size: 5rem;
+            line-height: 5rem;
+        }
+
+        @media only screen and (min-width: $extra-large-device) {
+            font-size: 7rem;
+            line-height: 7rem;
+        }
+    }
+
+    &--tertiary {
+        color: $dark;
+        font-size: 3rem;
+        line-height: 3rem;
+        font-weight: 400;
 
         @media only screen and (min-width: $medium-device) {
             font-size: 4rem;
             line-height: 4rem;
         }
-        
-    }
 
-    &--tertiary {
-        font-size: 2.4rem;
-        margin-bottom: 3rem;
+        @media only screen and (min-width: $extra-large-device) {
+            font-size: 5rem;
+            line-height: 5rem;
+        }
     }
 
     &--quaternary {
-        font-size: 2.2rem;
-        margin-bottom: 2.5rem;
+        color: $dark;
+        font-size: 2.5rem;
+        font-weight: 400;
+        line-height: 2.5rem;
+
+        @media only screen and (min-width: $medium-device) {
+            font-size: 3rem;
+            line-height: 3rem;
+        }
+
+        @media only screen and (min-width: $extra-large-device) {
+            font-size: 4rem;
+            line-height: 4rem;
+        }
     }
 
     &--quinary {
-        font-size: 1.8rem;
-        color: $grey-dark;
-        
+        color: rgba(0,0,0,0.65);
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 2.4rem;
+
         @media only screen and (min-width: $medium-device) {
-            font-size: 3rem;
+            font-size: 2.5rem;
+            line-height: 3rem;
         }
+    }
+}
+
+.text {
+    color: #1a1a1a;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.2rem;
+
+    &--white {
+        color: $white;
     }
 }
 
@@ -83,30 +127,23 @@ a {
     margin-bottom: 3.5rem;
 }
 
-.hero {
-    & .text {
-        width: 55%;
-        font-weight: 300;
-        line-height: 1.6;
-    }
-}
-
-.cta {
+.social-link {
     color: $dark;
-}
-
-.home-about {
-    & .text {
-        margin-bottom: 3rem;
-    }
-}
-
-.instagram-username {
-    color: $dark;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     font-weight: 400;
+    line-height: 1.8rem;
     position: relative;
     z-index: 1;
+
+    @media only screen and (min-width: $medium-device) {
+        font-size: 2.4rem;
+        line-height: 2.4rem;
+    }
+
+    @media only screen and (min-width: $extra-large-device) {
+        font-size: 4rem;
+        line-height: 4rem;
+    }
 
     &::after {
         content: '';
@@ -127,83 +164,79 @@ a {
     }
 }
 
-.email {
-    color: $dark;
-    font-size: 1.8rem;
-    position: relative;
-    z-index: 1;
-    margin-bottom: 4rem;
+.hero {
+    & .text {
+        width: 55%;
+        font-weight: 400;
+        line-height: 1.6;
 
-    @media only screen and (min-width: $medium-device){
-        font-size: 2.4rem;
-        font-weight: 2.4rem;
-    }
-
-    @media only screen and (min-width: $large-device) {
-        margin-bottom: 0;
-    }
-
-    &::after {
-        content: '';
-        position: absolute;
-        left: 0%;
-        bottom: 0%;
-        z-index: -1;
-        height: .6rem;
-        width: 100%;
-        background-color: $white;
-        transition: all .3s ease-in-out;
-    }
-
-    &:hover {
-        &::after {
-            height: .3rem;
+        @media only screen and (min-width: $extra-large-device) {
+            font-size: 1.5rem;
+            line-height: 2.2rem;
+            margin-top: 4rem;
+            color: $grey-dark;
         }
+    }
+}
+
+.cta {
+    color: $dark;
+}
+
+.home-about {
+    & .text {
+        margin-bottom: 3rem;
     }
 }
 
 .footer {
     color: $white;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+    line-height: 2.1;
     font-weight: 400;
-    line-height: 1.6;
 }
 
 .author {
     color: $white;
 }
 
-.social__link {
-    color: $dark;
-    font-size: 2.4rem;
-    font-weight: 400;
-    list-style: 1.8rem;
-    position: relative;
-    z-index: 1;
-
-    &::after {
-        content: '';
-        position: absolute;
-        left: 0%;
-        bottom: 10%;
-        z-index: -1;
-        height: .6rem;
-        width: 100%;
-        background-color: $white;
-        transition: all .5s ease-in-out;
-    }
-
-    &:hover {
-        &::after {
-            height: .3rem;
-        }
-    }
-}
-
 .services {
     &__intro {
         & .text {
             width: 35%;
+        }
+    }
+}
+
+.about__content {
+    
+    @media only screen and (min-width: $extra-large-device) {
+        width: 90%;
+        margin: 0 0 0 auto;
+    }
+
+    & .text {
+        @media only screen and (min-width: $large-device) {
+            width: 100%;
+        }
+
+        @media only screen and (min-width: $extra-large-device) {
+            width: 90%;
+        }
+    }
+}
+
+.work-approach {
+    & li {
+        @media only screen and (min-width: $large-device) {
+            font-size: 2rem;
+            font-weight: 400;
+            line-height: 2.7rem;
+        }
+
+        @media only screen and (min-width: $extra-large-device) {
+            font-size: 2.8rem;
+            line-height: 3.8rem;
         }
     }
 }

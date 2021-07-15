@@ -1,6 +1,20 @@
 .about {
-    padding-top: 12rem;
+    padding-top: 13rem;
     background-color: $white;
+
+    & h2 {
+        margin-bottom: 6rem;
+    }
+
+    & .text:not(:last-child) {
+        margin-bottom: 2.7rem;
+    }
+
+    & .grid__item--3 {
+        & .text {
+            margin-bottom: 6rem;
+        }
+    }
 
     @media only screen and (min-width: $large-device) {
         padding-top: 0;
@@ -16,11 +30,18 @@
         padding: 10rem 0;
     }
 
+    & h2 {
+        margin-bottom: 6rem;
+    }
+
+
     & .wrapper {
         @include sbfsc;
     }
 
     &__list {
+        margin: 0 0 6rem 0;
+
         @media only screen and (min-width: $large-device) {
             width: auto;
             display: flex;
@@ -29,17 +50,23 @@
         }
 
         & ul {
-            @media only screen and (min-width: $larger-device) {
+            @media only screen and (min-width: $large-device) {
+                width: 40rem;
+            }
+
+            @media only screen and (min-width: $extra-large-device) {
                 width: 53rem;
             }
         }
     }
 
     & ul {
-        margin-bottom: 2rem;
+        &:not(:last-child) {
+            margin-bottom: 5rem;
+        }
 
         & li:not(:last-child) {
-            margin-bottom: 2rem;
+            margin-bottom: 5rem;
         }
     }
 }

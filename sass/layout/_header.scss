@@ -5,9 +5,23 @@
     z-index: 5;
     width: 100%;
     padding: 1.5rem 0;
+    transition: all .3s ease-in-out;
 
     @media only screen and (min-width: $large-device) {
         padding: 3.5rem 0;
+    }
+
+    &--scrolled {
+
+        @media only screen and (min-width: $large-device) {
+            padding: 0rem 0;
+        }
+
+        & .logo {
+            @media only screen and (min-width: $large-device) {
+                transform: scale(0.65);
+            }
+        }
     }
 
     & .wrapper {
@@ -21,6 +35,7 @@
         background-color: $grey;
         height: 4rem;
         width: 4rem;
+        transition: all .3s ease-in-out;
 
         @media only screen and (min-width: $large-device) {
             height: 8rem;
