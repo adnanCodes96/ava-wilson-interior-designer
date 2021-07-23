@@ -2,6 +2,10 @@
     padding: 7.5rem 0;
     background-color: $white;
 
+    @media only screen and (min-width: $extra-large-device) {
+        padding: 10rem 0;
+    }
+
     & .wrapper {
         @include sbfsc;
 
@@ -27,6 +31,7 @@
 
     &__bottom {
         width: 100%;
+        padding-top: 5rem;
 
         @media only screen and (min-width: $large-device) {
             width: 50%;
@@ -52,7 +57,7 @@
         }
 
         @media only screen and (min-width: $large-device) {
-            height: 70vh;
+            height: 78vh;
             padding: 0;
         }
 
@@ -66,19 +71,28 @@
                 justify-content: flex-start;
                 align-items: center;
                 width: 100%;
-
                 & .text {
-                    width: 45%;
+                    width: 75%;
                     margin-bottom: 0;
-
-                    @media only screen and (min-width: $extra-large-device) {
-                        width: 34%;
-                        margin-right: 20rem !important;
-                    }
                 }
 
                 & .email {
+                    width: auto;
+                }
+            }
+
+            &__left,
+            &__right {
+                @media only screen and (min-width: $large-device) {
                     width: 50%;
+                }
+            }
+
+            &__left {
+                margin-bottom: 6rem;
+
+                @media only screen and (min-width: $large-device) {
+                    margin-bottom: 0;
                 }
             }
         }

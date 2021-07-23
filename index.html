@@ -7,7 +7,21 @@
     <meta name="msapplication-TileColor" content="#f2f2f2">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#242424">
+    <meta name="description" content="Individual development of residental and public spaces.">
+    <meta name="keywords" content="Ava Wilson, Interior Designer">
+    <meta name="author" content="Adnan Musinovic">
+    <meta http-equiv="cache-control" content="max-age=31536000">
 
+    <meta property="og:title" content="Ava Wilson | Interior Designer">
+    <meta property="og:description" content="Individual development of residental and public spaces.">
+    <meta property="og:image" content="https://ava-wilson.000webhostapp.com/images/share.jpg">
+    <meta property="og:url" content="https://ava-wilson.000webhostapp.com">
+
+    <meta name="twitter:title" content="Ava Wilson | Interior Designer">
+    <meta name="twitter:description" content="Individual development of residental and public spaces.">
+    <meta name="twitter:image" content="https://ava-wilson.000webhostapp.com/images/share.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    
     <link rel="apple-touch-icon" sizes="57x57" href="images/favicons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="images/favicons/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="images/favicons/apple-icon-72x72.png">
@@ -25,14 +39,14 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Ava Wilson &#8211; Private interior designer of houses and apartments. Professional services of a private interior designer of a country house, cottage, tankhouses</title>
 </head>
-<body>
+<body id="home">
     <!--Loader-->
-    <div class="loader"></div>
+    <div class="loader loader-1 loader--active"></div>
 
     <!--Header-->
     <header class="header">
         <div class="wrapper">
-            <a href="index.html" class="logo">aw</a>
+            <a href="index" class="logo anchor">aw</a>
 
             <div class="menu">
                 <div class="menu__line"></div>
@@ -44,11 +58,11 @@
             <nav class="nav nav--hidden">
                 <div class="close"><svg aria-hidden="true" focusable="false" height="25px" width="25px" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times fa-w-11" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="#fff" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg></div>
                 <ul class="list list--1">
-                    <li><a class="nav__link nav__link--active" href="index.html">Home</a></li>
-                    <li><a class="nav__link" href="projects.html">Projects</a></li>
-                    <li><a class="nav__link" href="services.html">Services and prices</a></li>
-                    <li><a class="nav__link" href="about.html">About me</a></li>
-                    <li><a class="nav__link" href="contact.html">Contact</a></li>
+                    <li><a class="nav__link nav__link--active anchor" href="index">Home</a></li>
+                    <li><a class="nav__link anchor" href="projects">Projects</a></li>
+                    <li><a class="nav__link anchor" href="services">Services and prices</a></li>
+                    <li><a class="nav__link anchor" href="about.html">About me</a></li>
+                    <li><a class="nav__link anchor" href="contact">Contact</a></li>
                 </ul>
 
                 <ul class="list list--2">
@@ -61,7 +75,7 @@
         </div>
     </header>
 
-    <main class="main" role="main">
+    <main class="main">
     
     <!--Hero-->
     <section class="hero">
@@ -69,16 +83,14 @@
             <div class="grid__item grid__item--1"></div>
             <div class="grid__item grid__item--2">
                 <div class="top">
-                    <h1 class="heading heading--primary">Modern <br> cozy luxury in the interior</h1>
-                    <p class="text">Individual development of <br> residental and public <br> spaces</p>
+                    <h1 class="heading heading--primary" id="heroHeading">Modern <br> cozy luxury in the interior</h1>
+                    <p class="text" id="heroText">Individual development of <br> residental and public <br> spaces</p>
                 </div>
                 <div class="bottom">
-                    <a href="projects.html" class="cta">Portfolio</a>
+                    <a href="projects" class="cta anchor" id="heroCta">Portfolio</a>
                 </div>
             </div>
-            <div class="grid__item grid__item--3" id="heroBg">
-                <!-- <img src="images/hero-bg.jpg" alt=""> -->
-            </div>
+            <div class="grid__item grid__item--3" id="heroBg"></div>
         </div>
     </section>
 
@@ -86,14 +98,14 @@
     <section class="home-about">
         <div class="wrapper">
             <div class="home__about--top">
-                <h2 class="heading heading--secondary">I provide a full range of services in the field of interior design and furniture business.</h2>
+                <h2 class="heading heading--secondary" id="homeAboutHeading">I provide a full range of services in the field of interior design and furniture business.</h2>
             </div>
             <div class="home__about--bottom">
-                <p class="text">Ava Wilson <br> interior designer</p>
+                <p class="text home-about-text-1">Ava Wilson <br> interior designer</p>
 
-                <p class="text">For over 10 years I have been creating unique, beautiful, functional spaces for commercial and residental projects around the world.</p>
+                <p class="text home-about-text-2">For over 10 years I have been creating unique, beautiful, functional spaces for commercial and residental projects around the world.</p>
 
-                <a href="about.html" class="cta">About me</a>
+                <a href="about" class="cta anchor" id="homeAboutCta">About me</a>
             </div>
         </div>
     </section>
@@ -102,28 +114,28 @@
     <section class="implemented-projects">
 
         <div class="wrapper">
-            <h2 class="heading heading--secondary">Implemented <br> projects</h2>
+            <h2 class="heading heading--secondary" id="implementedProjectsHeading">Implemented <br> projects</h2>
         </div>
 
             <div class="implemented-projects__container">
 
                 <div class="implemented-projects__item implemented-projects__item--1">
-                    <div class="image"></div>
-                    <div class="text"><h3 class="heading heading--tertiary">Wather stadium</h3></div>
+                    <div class="image"><img data-src="images/water-stadium.jpg" src="" alt=""></div>
+                    <div class="text ipHeading"><h3 class="heading heading--tertiary">Wather stadium</h3></div>
                     <div class="top-line"></div>
                     <div class="bottom-line"></div>
                 </div>
 
                 <div class="implemented-projects__item implemented-projects__item--2">
-                    <div class="image"></div>
-                    <div class="text"><h3 class="heading heading--tertiary">Udaltsova</h3></div>
+                    <div class="image"><img data-src="images/udaltsova.jpg" src="" alt=""></div>
+                    <div class="text ipHeading"><h3 class="heading heading--tertiary">Udaltsova</h3></div>
                     <div class="top-line"></div>
                     <div class="bottom-line"></div>
                 </div>
 
                 <div class="implemented-projects__item implemented-projects__item--3">
-                    <div class="image"></div>
-                    <div class="text"><h3 class="heading heading--tertiary">Prechistenka</h3></div>
+                    <div class="image"><img data-src="images/prechisenka.jpg" src="" alt=""></div>
+                    <div class="text ipHeading"><h3 class="heading heading--tertiary">Prechistenka</h3></div>
                     <div class="top-line"></div>
                     <div class="bottom-line"></div>
                 </div>
@@ -131,7 +143,7 @@
             </div>
 
         <div class="cta__container">
-            <a href="projects.html" class="cta">All projects</a>
+            <a href="projects" class="cta anchor" id="ipCta">All projects</a>
         </div>    
 
     </section>
@@ -139,7 +151,7 @@
     <!--Home services-->
     <section class="home-services">
         <div class="wrapper">
-            <h2 class="heading heading--secondary">Services</h2>
+            <h2 class="heading heading--secondary" id="homeServicesHeading">Services</h2>
 
             <div class="accordion">
                 <div class="accordion__item">
@@ -203,7 +215,7 @@
                 </div>
             </div>
 
-            <a href="services.html" class="cta">Services and prices</a>
+            <a href="services" class="cta anchor" id="homeServicesCta">Services and prices</a>
         </div>
     </section>
 
@@ -218,11 +230,11 @@
             </div>
         </div>
 
-        <div class="grid">
-            <a href="https://instagram.com" target="_blank" class="grid__item grid__item--1"></a>
-            <a href="https://instagram.com" target="_blank" class="grid__item grid__item--2"></a>
-            <a href="https://instagram.com" target="_blank" class="grid__item grid__item--3"></a>
-            <a href="https://instagram.com" target="_blank" class="grid__item grid__item--4"></a>
+        <div class="grid" id="instagramGrid">
+            <a href="https://instagram.com" target="_blank" class="grid__item grid__item--1 instagram-post"></a>
+            <a href="https://instagram.com" target="_blank" class="grid__item grid__item--2 instagram-post"></a>
+            <a href="https://instagram.com" target="_blank" class="grid__item grid__item--3 instagram-post"></a>
+            <a href="https://instagram.com" target="_blank" class="grid__item grid__item--4 instagram-post"></a>
         </div>
     </section>
 
@@ -230,17 +242,17 @@
     <section class="questions">
         <div class="wrapper">
             <div class="questions__top">
-                <h2 class="heading heading--secondary">Still have questions</h2>
+                <h2 class="heading heading--secondary" id="questionsHeading">Still have questions</h2>
             </div>
         </div>
 
         <div class="questions__bottom">
             <div class="wrapper">
                 <div class="questions__item questions__item--1">
-                    <a href="mailto:" target="_blank" class="social-link">ava@wilson.com</a>
+                    <a href="mailto:" target="_blank" class="social-link social-link--white email">ava@wilson.com</a>
                 </div>
                 <div class="questions__item questions__item--2">
-                    <p class="text">I will answer in detail the questions on the implementation and implementation of the design project, timing and budget.</p>
+                    <p class="text" id="questionsText">I will answer in detail the questions on the implementation and implementation of the design project, timing and budget.</p>
                 </div>
             </div>
         </div>
@@ -255,17 +267,17 @@
             </div>
             <div class="footer__item footer__item--2">
                 <ul class="footer__ul">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="services.html">Services and prices</a></li>
-                    <li><a href="about.html">About me</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a class="anchor" href="index">Home</a></li>
+                    <li><a class="anchor" href="projects">Projects</a></li>
+                    <li><a class="anchor" href="services">Services and prices</a></li>
+                    <li><a class="anchor" href="about">About me</a></li>
+                    <li><a class="anchor" href="contact">Contact</a></li>
                 </ul>
             </div>
             <div class="footer__item footer__item--3">
                 <ul class="footer__ul">
                     <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
-                    <li><a href="https://youtube.com" target="_blanl">Youtube</a></li>
+                    <li><a href="https://youtube.com" target="_blank">Youtube</a></li>
                 </ul>
             </div>
             <div class="footer__item footer__item--4">
@@ -273,6 +285,11 @@
             </div>
         </div>
     </footer>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
 <script defer src="dist/bundle.js"></script>
+
 </body>
 </html>

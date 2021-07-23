@@ -151,7 +151,7 @@ a {
         left: 0%;
         bottom: 0%;
         z-index: -1;
-        height: .6rem;
+        height: 1.2rem;
         width: 100%;
         background-color: $grey-light;
         transition: all .3s ease-in-out;
@@ -159,7 +159,14 @@ a {
 
     &:hover {
         &::after {
-            height: .3rem;
+            height: .7rem;
+        }
+    }
+
+    &--white {
+        &::after {
+            @extend .social-link::after;
+            background-color: $white;
         }
     }
 }
@@ -186,6 +193,12 @@ a {
 .home-about {
     & .text {
         margin-bottom: 3rem;
+    }
+}
+
+.accordion {
+    & h3 {
+        color: $grey-dark;
     }
 }
 

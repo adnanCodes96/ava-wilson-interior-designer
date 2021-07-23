@@ -30,7 +30,7 @@
     }
 
     & h2 {
-        margin-bottom: 3rem;
+        margin-bottom: 3rem;     
 
         @media only screen and (min-width: $extra-large-device) {
             width: 80%;
@@ -92,10 +92,9 @@
         margin-top: 6rem;
         width: 100%;
         max-width: 160rem;
-
         @media only screen and (min-width: $extra-large-device) {
-            width: 90%;
-            margin: 0 auto;
+            width: 80%;
+            margin: 6rem auto 0 auto;
         }
     }
 
@@ -111,6 +110,7 @@
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
+            transform-origin: 100% 0;
             width: .1rem;
         }
 
@@ -125,10 +125,23 @@
         }
 
         & .image {
-            width: 40%;
-            height: 0;
-            padding-top: 40%;
-            @include bgs;
+            width: 45%;
+            height: 0rem;
+            padding-top: 45%;
+            position: relative;
+            overflow: hidden;
+
+            & img {
+                position: absolute;
+                top: 0rem;
+                right: 0%;
+                bottom: 0%;
+                left: 0%;
+                height: 115%;
+                width: 100%;
+                object-fit: cover;
+                transition: all .5s ease;
+            }
         }
 
         & .text {
@@ -140,23 +153,14 @@
 
         &--1 {
             justify-content: flex-start;
-            & .image {
-                background-image: url(../../images/water-stadium.jpg);
-            }
         }
 
         &--2 {
             justify-content: flex-end;
-            & .image {
-                background-image: url(../../images/udaltsova.jpg);
-            }
         }
 
         &--3 {
             justify-content: flex-start;
-            & .image {
-                background-image: url(../../images/prechisenka.jpg);
-            }
         }
     }
 
@@ -195,12 +199,12 @@
         align-items: center;
         cursor: pointer;
 
-        & h5 {
+        & h3 {
             transition: all .3s ease-in-out;
         }
 
         &:hover {
-            & h5 {
+            & h3 {
                 color: $dark;
             }
 

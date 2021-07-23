@@ -20,17 +20,23 @@ html, body {
 }
 
 .loader {
-    position: fixed;
-    top: 0%;
-    right: 0%;
-    bottom: 0%;
-    left: 0%;
-    z-index: 1000;
-    height: 100%;
-    width: 100%;
-    background-color: $grey-light;
-    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
-    animation: loader 1.5s ease-in-out;
+    &-1 {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 101;
+        background-color: $grey;
+        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+        pointer-events: none;
+        transition: .5s ease-out;
+    }
+
+    &--active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        pointer-events: all;
+    }
 }
 
 img {
@@ -45,4 +51,10 @@ main {
     min-height: 100vh;
     position: relative;
     z-index: 2;
+}
+
+#my-scrollbar {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
 }

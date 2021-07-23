@@ -108,9 +108,14 @@ ol {
         letter-spacing: .1rem;
 
         @media only screen and (min-width: $large-device) {
-            color: $dark;
+            color: $grey-dark;
             font-size: 1.6rem;
             font-weight: 500;
+            transition: all .3s ease-in-out;
+
+            &:hover {
+                color: $dark;
+            }
         }
 
         & img {

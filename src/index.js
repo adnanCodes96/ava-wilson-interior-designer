@@ -1,9 +1,29 @@
-import animations from './animations.js';
+import animations from '../src/animations.js';
 
 //Page transition
 window.addEventListener('load', () => {
-    let loader = document.querySelector('.loader');
-})
+    const loader = document.querySelector('.loader');
+    const link = document.querySelectorAll('.anchor');
+
+    setTimeout(() => {
+        loader.classList.remove('loader--active');
+    }, 500);
+
+    for(let i = 0; i < link.length; i++) {
+        const links = link[i];
+
+        links.addEventListener('click', (e) => {
+            e.preventDefault();
+            let target = e.target.href;
+
+            loader.classList.add('loader--active');
+
+            setTimeout(() => {
+                window.location.href = target;
+            }, 500);
+        })
+    }
+});
 
 //Scale Header on scrroll
 const header = document.querySelector('.header');
@@ -59,12 +79,59 @@ if(window.matchMedia("(min-width: 1024px)")) {
 }
 
 //Paralax scrolling
-window.addEventListener('scroll', () => {
-    let wScroll = window.pageYOffset / 5;
-    const heroBg = document.getElementById('heroBg');
+let page = document.body.id;
 
-    heroBg.style.backgroundPositionY = `${wScroll}px`;
-})
+switch (page) {
+    case 'home':
+        window.addEventListener('scroll', () => {
+            let wScroll = window.pageYOffset;
+            const heroBg = document.getElementById('heroBg');
+            const implementedProjectsImages = document.querySelectorAll('.image img');
+        
+            heroBg.style.backgroundPositionY = `${wScroll / 5}px`;
+        
+            for(let i = 0; i < implementedProjectsImages.length; i++) {
+                implementedProjectsImages[i].style.transform = `translateY(${-wScroll / 45}px)`;
+            }
+        })
+        break;
+
+    default:
+        break;
+}
+
+//Defer offscreen images
+const images = document.querySelectorAll('[data-src]');
+
+function preLoadImage(img) {
+    const src = img.getAttribute('data-src');
+
+    if(!src) {
+        return;
+    }
+
+    img.src = src;
+}
+
+const imgOptions = {
+    threshold: 0,
+    rootMargin: "0px 0px 300px 0px"
+};
+
+const imgObserver = new IntersectionObserver((entries, imgObserver) => {
+    entries.forEach(entry => {
+        if(!entry.isIntersecting) {
+            return;
+        } else {
+            preLoadImage(entry.target);
+            imgObserver.unobserve(entry.target);
+        }
+    })
+}, imgOptions);
+
+images.forEach(image => {
+    imgObserver.observe(image);
+});
 
 // Accordion
 let accordionItem = document.querySelectorAll('.accordion__item');
